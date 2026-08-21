@@ -149,7 +149,7 @@
                     </h1>
                     <p class="text-white text-base leading-7 mt-5 wow fadeInUp" data-wow-delay=".6s">Calculate your O-Level and A-Level admission weight. Discover which Ugandan university you qualify for in seconds.</p>
                     <div class="button mt-[50px] wow fadeInUp" data-wow-delay=".8s">
-                        <a href="{{ route('register') }}" class="inline-block text-sm font-medium capitalize px-[30px] py-[14px] bg-[#3E80FF] text-white rounded-[30px] transition-all duration-300 hover:bg-white hover:text-[#24126A]">Discover More</a>
+                        <a href="{{ route('register') }}" class="inline-block text-sm font-medium capitalize px-[30px] py-[14px] bg-[#3E80FF] text-white rounded-[30px] transition-all duration-300 hover:bg-[#24126A]">Discover More</a>
                     </div>
                 </div>
             </div>

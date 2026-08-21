@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="csrf-token" content="{{ csrf_token() }}" />
+    <title>S6WeightCalculator — Your University Admission Partner</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap");
+        @import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap");
+    </style>
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
+    <link rel="icon" type="image/svg+xml" href="{{ asset('favicon.svg') }}">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script>new WOW().init();</script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        [x-cloak] { display: none !important; }
+        .navbar .nav-link:hover, .navbar .dropdown-item:hover { color: #3E80FF !important; background: transparent !important; }
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+    </style>
+    <script>
+        if (localStorage.getItem('dark') === 'true' || (!localStorage.getItem('dark') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+            localStorage.setItem('dark', 'true');
+        }
+    </script>
+</head>
+<body x-data="{ dark: false, sticky: false, scrollTop: false, mOpen: false }"
+      @scroll.window="sticky = (window.pageYOffset > 80) ? true : false; scrollTop = (window.pageYOffset > 300) ? true : false"
+      class="font-['DM_Sans'] text-[#727272] text-sm antialiased overflow-x-hidden">
+
+<div class="preloader">
+    <div class="preloader-inner">
+        <div class="preloader-icon">
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+</div>
+
+{{-- ===== HEADER ===== --}}
+<header class="absolute top-0 left-0 w-full z-50 transition-all duration-300"
+        :class="{'!fixed !bg-white shadow-[0_20px_50px_rgba(0,0,0,0.05)]': sticky}">
+    <div class="container mx-auto px-4">
+        <div class="flex items-center justify-between py-4 lg:py-0">
+            <a href="/" class="text-xl lg:text-2xl font-extrabold tracking-tight font-['Spartan']"
+               :class="sticky ? 'text-[#24126A]' : 'text-white'">
+                S6<span class="text-[#3E80FF]">Weight</span>Calculator
+            </a>
+
+            <div class="flex items-center gap-2 lg:hidden">
+                <button onclick="document.documentElement.classList.toggle('dark');localStorage.setItem('dark',document.documentElement.classList.contains('dark'))"
+                        class="p-2 rounded-full transition-all duration-300"
+                        :class="sticky ? 'text-[#24126A]' : 'text-white'">
+                    <svg class="w-5 h-5 block dark:hidden" fill="currentColor" viewBox="0 0 24 24"><path d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z"/></svg>
+                    <svg class="w-5 h-5 hidden dark:block" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.25a.75.75 0 01.75.75v2.25a.75.75 0 01-1.5 0V3a.75.75 0 01.75-.75zM7.5 12a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM18.894 6.166a.75.75 0 00-1.06-1.06l-1.591 1.59a.75.75 0 101.06 1.061l1.591-1.59zM21.75 12a.75.75 0 01-.75.75h-2.25a.75.75 0 010-1.5H21a.75.75 0 01.75.75zM17.834 18.894a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 10-1.061 1.06l1.59 1.591zM12 18a.75.75 0 01.75.75V21a.75.75 0 01-1.5 0v-2.25A.75.75 0 0112 18zM7.758 17.303a.75.75 0 00-1.061-1.06l-1.591 1.59a.75.75 0 001.06 1.061l1.591-1.59zM6 12a.75.75 0 01-.75.75H3a.75.75 0 010-1.5h2.25A.75.75 0 016 12zM6.697 7.757a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 00-1.061 1.06l1.59 1.591z"/></svg>
+                </button>
+                <button class="p-2" @click="mOpen = !mOpen">
+                    <span class="flex flex-col gap-1.5 w-6">
+                        <span class="block h-0.5 rounded transition-all duration-300"
+                              :class="sticky ? '!bg-[#24126A]' : 'bg-white'"
+                              :class="{'rotate-45 translate-y-[7px]': mOpen}"></span>
+                        <span class="block h-0.5 rounded transition-all duration-300"
+                              :class="sticky ? '!bg-[#24126A]' : 'bg-white'"
+                              x-show="!mOpen"></span>
+                        <span class="block h-0.5 rounded transition-all duration-300"
+                              :class="sticky ? '!bg-[#24126A]' : 'bg-white'"
+                              :class="{'-rotate-45 -translate-y-[7px]': mOpen}"></span>
+                    </span>
+                </button>
+            </div>
+
+            <div class="hidden lg:flex items-center" id="navbar">
+                <ul class="flex items-center gap-10 mx-auto">
+                    <li><a href="/" class="text-sm font-medium capitalize transition-all duration-300 py-[35px] inline-flex items-center"
+                           :class="sticky ? 'text-[#24126A] hover:text-[#3E80FF]' : 'text-white/90 hover:text-white'">Home</a></li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle text-sm font-medium capitalize transition-all duration-300 py-[35px] inline-flex items-center gap-1"
+                           :class="sticky ? 'text-[#24126A] hover:text-[#3E80FF]' : 'text-white/90 hover:text-white'"
+                           role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Pages
+                        </a>
+                        <ul class="dropdown-menu border-0 shadow rounded-3 py-3 px-3 min-w-[220px]"
+                            style="margin-top: 0;">
+                            <li><a href="{{ route('about-us') }}" class="dropdown-item rounded-2 py-2 text-sm fw-medium text-[#727272] hover:text-[#3E80FF]">About Us</a></li>
+                            <li><a href="{{ route('login') }}" class="dropdown-item rounded-2 py-2 text-sm fw-medium text-[#727272] hover:text-[#3E80FF]">Sign In</a></li>
+                            <li><a href="{{ route('register') }}" class="dropdown-item rounded-2 py-2 text-sm fw-medium text-[#727272] hover:text-[#3E80FF]">Sign Up</a></li>
+                            <li><a href="{{ route('contact') }}" class="dropdown-item rounded-2 py-2 text-sm fw-medium text-[#727272] hover:text-[#3E80FF]">Contact</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <button onclick="document.documentElement.classList.toggle('dark');localStorage.setItem('dark',document.documentElement.classList.contains('dark'))"
+                        class="p-2 rounded-full transition-all duration-300 mr-1"
+                        :class="sticky ? 'text-[#24126A] hover:text-[#3E80FF]' : 'text-white/90 hover:text-white'">
+                    <svg class="w-5 h-5 block dark:hidden" fill="currentColor" viewBox="0 0 24 24"><path d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z"/></svg>
+                    <svg class="w-5 h-5 hidden dark:block" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.25a.75.75 0 01.75.75v2.25a.75.75 0 01-1.5 0V3a.75.75 0 01.75-.75zM7.5 12a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM18.894 6.166a.75.75 0 00-1.06-1.06l-1.591 1.59a.75.75 0 101.06 1.061l1.591-1.59zM21.75 12a.75.75 0 01-.75.75h-2.25a.75.75 0 010-1.5H21a.75.75 0 01.75.75zM17.834 18.894a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 10-1.061 1.06l1.59 1.591zM12 18a.75.75 0 01.75.75V21a.75.75 0 01-1.5 0v-2.25A.75.75 0 0112 18zM7.758 17.303a.75.75 0 00-1.061-1.06l-1.591 1.59a.75.75 0 001.06 1.061l1.591-1.59zM6 12a.75.75 0 01-.75.75H3a.75.75 0 010-1.5h2.25A.75.75 0 016 12zM6.697 7.757a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 00-1.061 1.06l1.59 1.591z"/></svg>
+                </button>
+                <div class="button ml-8">
+                    <a href="{{ route('register') }}" class="inline-block text-sm font-medium capitalize px-[30px] py-[14px] bg-[#3E80FF] text-white rounded-[30px] transition-all duration-300 hover:bg-[#24126A]">Get started</a>
+                </div>
+            </div>
+        </div>
+
+        {{-- Mobile Nav --}}
+        <div x-show="mOpen" x-cloak @click.outside="mOpen = false" class="lg:hidden bg-white shadow-[0_15px_20px_rgba(0,0,0,0.1)] rounded-lg p-5 max-h-[350px] overflow-y-auto border-t border-gray-100">
+            <ul class="space-y-1">
+                <li><a href="/" @click="mOpen = false" class="block py-3 px-4 text-sm font-medium text-[#051441] hover:text-[#3E80FF]">Home</a></li>
+                <li x-data="{ mp: false }">
+                    <button @click="mp = !mp" class="flex items-center justify-between w-full py-3 px-4 text-sm font-medium text-[#051441] hover:text-[#3E80FF]">
+                        Pages
+                        <svg class="w-3 h-3 fill-current transition-transform" :class="{ 'rotate-180': mp }" viewBox="0 0 512 512"><path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"/></svg>
+                    </button>
+                    <div x-show="mp" x-cloak class="ml-4 space-y-1">
+                        <a href="{{ route('about-us') }}" @click="mOpen = false" class="block py-2 px-4 text-sm text-[#888] hover:text-[#3E80FF]">About Us</a>
+                        <a href="{{ route('login') }}" @click="mOpen = false" class="block py-2 px-4 text-sm text-[#888] hover:text-[#3E80FF]">Sign In</a>
+                        <a href="{{ route('register') }}" @click="mOpen = false" class="block py-2 px-4 text-sm text-[#888] hover:text-[#3E80FF]">Sign Up</a>
+                        <a href="{{ route('contact') }}" @click="mOpen = false" class="block py-2 px-4 text-sm text-[#888] hover:text-[#3E80FF]">Contact</a>
+                    </div>
+                </li>
+            </ul>
+            <div class="mt-3 pt-3 border-t border-gray-100">
+                <a href="{{ route('register') }}" @click="mOpen = false" class="block text-center text-sm font-medium px-[30px] py-[14px] bg-[#3E80FF] text-white rounded-[30px] hover:bg-[#24126A] transition-all">Get started</a>
+            </div>
+        </div>
+    </div>
+</header>
+
+{{-- ===== HERO ===== --}}
+<section class="hero-area relative bg-[#24126A] overflow-hidden pt-[180px] pb-[180px]">
+    <div class="container mx-auto px-4">
+        <div class="flex flex-wrap items-center -mx-4">
+            <div class="w-full lg:w-5/12 px-4">
+                <div class="hero-content text-left">
+                    <h4 class="text-white font-semibold text-sm mb-5 wow fadeInUp" data-wow-delay=".2s">Start Your University Journey</h4>
+                    <h1 class="font-['Spartan'] font-bold text-white text-4xl leading-tight capitalize mb-0 wow fadeInUp relative z-[1]" data-wow-delay=".4s">
+                        Say goodbye to <br>admission
+                        <span class="relative z-[1]">
+                            <span class="relative z-[2] text-[#3E80FF]">uncertainty.</span>
+                            <svg class="text-shape absolute left-0 bottom-[5px] w-full z-[-1]" viewBox="0 0 293 20" fill="none">
+                                <path d="M0 10.4v46.3h293.2V36.2c0 9.7-8.4 17.3-18.1 16.4L14.8 26.8C6.4 25.9 0 18.8 0 10.4z" fill="#3E80FF" opacity="0.3"/>
+                            </svg>
+                        </span>
+                    </h1>
+                    <p class="text-white text-base leading-7 mt-5 wow fadeInUp" data-wow-delay=".6s">Calculate your O-Level and A-Level admission weight. Discover which Ugandan university you qualify for in seconds.</p>
+                    <div class="button mt-[50px] wow fadeInUp" data-wow-delay=".8s">
+                        <a href="{{ route('register') }}" class="inline-block text-sm font-medium capitalize px-[30px] py-[14px] bg-[#3E80FF] text-white rounded-[30px] transition-all duration-300 hover:bg-white hover:text-[#24126A]">Discover More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="w-full lg:w-7/12 px-4">
+                <div class="hero-image text-center relative z-0">
+                    <div class="inline-block" style="animation: float 4s ease-in-out infinite;">
+                        <img src="{{ asset('images/Realman.png') }}" alt="Student"
+                             class="w-64 h-64 md:w-[400px] md:h-[400px] object-cover rounded-3xl shadow-[0_25px_80px_rgba(0,0,0,0.3)]">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{{-- ===== FEATURES ===== --}}
+<div class="feature section pt-[80px] pb-[110px] bg-white">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-[50px] px-6 md:px-12 lg:px-[100px] xl:px-[200px] max-lg:mb-[30px]">
+            <h3 class="text-sm font-semibold text-[#3E80FF] uppercase mb-5 wow zoomIn" data-wow-delay=".2s">Why choose us</h3>
+            <h2 class="font-['Spartan'] text-4xl font-bold text-[#24126A] mb-5 capitalize leading-tight wow fadeInUp" data-wow-delay=".4s">Our features</h2>
+            <p class="text-base leading-7 wow fadeInUp" data-wow-delay=".6s">Everything you need to calculate your university admission weight quickly and accurately.</p>
+        </div>
+
+        <div class="flex flex-wrap -mx-4">
+            <div class="w-full md:w-1/2 lg:w-1/3 px-4 wow fadeInUp" data-wow-delay=".2s">
+                <div class="feature-box min-h-[300px] mt-[30px] rounded-[20px] bg-white shadow-[0_0_30px_rgba(81,94,125,0.082)] p-[40px_50px] text-center transition-all duration-300 border-t-[3px] border-b-[3px] border-[#F4F7FA] hover:scale-105 hover:border-t-[#3E80FF] hover:border-b-[#3E80FF]">
+                    <div class="tumb">
+                        <svg class="h-[150px] mx-auto text-[#3E80FF]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+                    </div>
+                    <h4 class="text-title text-[#3b368c] font-['Spartan'] text-lg font-bold leading-7 mt-[30px] mb-[15px]">Instant Exchange</h4>
+                    <p class="text-sm leading-relaxed">Enter your UNEB O-Level and A-Level grades. Get your weighted admission score instantly with no delays.</p>
+                </div>
+            </div>
+            <div class="w-full md:w-1/2 lg:w-1/3 px-4 wow fadeInUp" data-wow-delay=".4s">
+                <div class="feature-box min-h-[300px] mt-[30px] rounded-[20px] bg-white shadow-[0_0_30px_rgba(81,94,125,0.082)] p-[40px_50px] text-center transition-all duration-300 border-t-[3px] border-b-[3px] border-[#F4F7FA] hover:scale-105 hover:border-t-[#3E80FF] hover:border-b-[#3E80FF]">
+                    <div class="tumb">
+                        <svg class="h-[150px] mx-auto text-[#3E80FF]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
+                    </div>
+                    <h4 class="text-title text-[#3b368c] font-['Spartan'] text-lg font-bold leading-7 mt-[30px] mb-[15px]">Safe & Secure</h4>
+                    <p class="text-sm leading-relaxed">Your data is private and secure. Calculate your admission weight with full confidentiality.</p>
+                </div>
+            </div>
+            <div class="w-full md:w-1/2 lg:w-1/3 px-4 wow fadeInUp" data-wow-delay=".6s">
+                <div class="feature-box min-h-[300px] mt-[30px] rounded-[20px] bg-white shadow-[0_0_30px_rgba(81,94,125,0.082)] p-[40px_50px] text-center transition-all duration-300 border-t-[3px] border-b-[3px] border-[#F4F7FA] hover:scale-105 hover:border-t-[#3E80FF] hover:border-b-[#3E80FF]">
+                    <div class="tumb">
+                        <svg class="h-[150px] mx-auto text-[#3E80FF]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/></svg>
+                    </div>
+                    <h4 class="text-title text-[#3b368c] font-['Spartan'] text-lg font-bold leading-7 mt-[30px] mb-[15px]">Instant Trading</h4>
+                    <p class="text-sm leading-relaxed">Select essentials and desirable subjects. Compare your total weight against all Ugandan university cutoffs.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{{-- ===== CALL TO ACTION ===== --}}
+<section class="call-action bg-[#F4F7FA]">
+    <div class="container mx-auto px-4">
+        <div class="inner-content relative py-20 rounded-[10px] z-0 overflow-hidden">
+            <div class="flex flex-wrap items-center -mx-4">
+                <div class="w-full lg:w-1/2 px-4">
+                    <div class="text">
+                        <h2 class="font-['Spartan'] text-3xl font-bold text-[#081828] leading-tight">
+                            You are using free<br>
+                            <span class="block text-[#3E80FF]">S6WeightCalculator.</span>
+                        </h2>
+                        <p class="text-base leading-7 mt-2.5">Create your free account and discover your university admission weight in minutes.</p>
+                    </div>
+                </div>
+                <div class="w-full lg:w-1/2 px-4 mt-8 lg:mt-0">
+                    <div class="button lg:float-right max-lg:text-center">
+                        <a href="{{ route('register') }}" class="inline-block text-sm font-medium capitalize px-[30px] py-[14px] bg-[#3E80FF] text-white rounded-[30px] transition-all duration-300 hover:bg-[#24126A]">Get Started Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{{-- ===== FOOTER ===== --}}
+<footer class="footer bg-[#24126A] pt-[110px] pb-0 relative">
+    <div class="container mx-auto px-4">
+        <div class="flex flex-wrap -mx-4">
+            <div class="w-full lg:w-4/12 px-4 mb-10 lg:mb-0">
+                <div class="single-footer f-about pr-[30px] max-lg:pr-0 max-lg:text-center">
+                    <div class="logo mb-5">
+                        <a href="/" class="text-2xl font-extrabold tracking-tight font-['Spartan'] text-white">
+                            S6<span class="text-[#3E80FF]">Weight</span>Calculator
+                        </a>
+                    </div>
+                    <p class="text-white/70 text-base leading-7 max-w-xs max-lg:mx-auto">Making university admission simple for every S6 student in Uganda.</p>
+                    <h4 class="social-title text-white font-semibold text-xs block mb-5 mt-8">Follow Us On:</h4>
+                    <ul class="social flex items-center gap-[15px] max-lg:justify-center">
+<li><a href="https://facebook.com/edrine.renod" target="_blank" class="text-white hover:text-[#3E80FF] transition-all duration-300">
+    <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M14 13.5H16.5L17.5 9.5H14V7.5C14 6.47 14 5.5 16 5.5H17.5V2.14C17.174 2.097 15.943 2 14.643 2C11.928 2 10 3.657 10 6.7V9.5H7V13.5H10V22H14V13.5Z"/></svg>
+</a></li>
+<li><a href="https://wa.me/256774120185" target="_blank" class="text-white hover:text-[#3E80FF] transition-all duration-300">
+    <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-1.102-1.016-1.847-2.27-2.063-2.654-.216-.384-.023-.592.163-.784.168-.172.374-.45.562-.674.187-.225.25-.386.374-.644.125-.258.062-.484-.032-.678-.093-.194-.67-1.618-.92-2.216-.242-.579-.487-.5-.67-.508-.173-.008-.372-.01-.57-.01-.199 0-.523.074-.797.372-.274.298-1.043 1.02-1.043 2.488s1.07 2.887 1.22 3.088c.149.2 2.108 3.22 5.108 4.517.714.31 1.27.496 1.704.635.714.227 1.364.195 1.877.118.574-.088 1.767-.721 2.016-1.418.248-.697.248-1.295.174-1.42-.074-.125-.273-.198-.57-.347m-5.472 6.868V21.25a9.25 9.25 0 110-18.5 9.25 9.25 0 110 18.5m0-20.25a11 11 0 100 22 11 11 0 000-22z"/></svg>
+</a></li>
+<li><a href="https://linkedin.com/in/abonga-technist" target="_blank" class="text-white hover:text-[#3E80FF] transition-all duration-300">
+    <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M6.94 5C6.94 5.53 6.729 6.04 6.354 6.414C5.978 6.789 5.469 7 4.939 7C4.409 7 3.9 6.789 3.525 6.414C3.15 6.039 2.94 5.53 2.94 5C2.94 4.47 3.15 3.96 3.525 3.586C3.9 3.211 4.409 3 4.939 3C5.469 3 5.978 3.211 6.354 3.586C6.729 3.96 6.94 4.47 6.94 5ZM7 8.48H3V21H7V8.48ZM13.32 8.48H9.34V21H13.28V14.43C13.28 10.77 18.05 10.43 18.05 14.43V21H22V13.07C22 6.9 14.94 7.13 13.28 10.16L13.32 8.48Z"/></svg>
+</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="w-full md:w-1/2 lg:w-2/12 px-4 mb-10 lg:mb-0">
+                <div class="single-footer f-link">
+                    <h3 class="text-white font-['Spartan'] text-lg font-semibold mb-[35px]">Solutions</h3>
+                    <ul class="space-y-[15px]">
+                        <li><a href="{{ route('login') }}" class="text-white text-sm font-medium hover:text-[#3E80FF] transition-all duration-300">Sign In</a></li>
+                        <li><a href="{{ route('register') }}" class="text-white text-sm font-medium hover:text-[#3E80FF] transition-all duration-300">Sign Up</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="w-full md:w-1/2 lg:w-2/12 px-4 mb-10 lg:mb-0">
+                <div class="single-footer f-link">
+                    <h3 class="text-white font-['Spartan'] text-lg font-semibold mb-[35px]">Support</h3>
+                    <ul class="space-y-[15px]">
+                        <li><a href="{{ route('contact') }}" class="text-white text-sm font-medium hover:text-[#3E80FF] transition-all duration-300">Contact</a></li>
+                        <li><a href="mailto:abonga029@gmail.com" class="text-white text-sm font-medium hover:text-[#3E80FF] transition-all duration-300">abonga029@gmail.com</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="w-full md:w-1/2 lg:w-4/12 px-4 mb-10 lg:mb-0">
+                <div class="single-footer newsletter lg:pl-[80px]">
+                    <h3 class="text-white font-['Spartan'] text-lg font-semibold mb-[35px]">Subscribe</h3>
+                    <p class="text-white/70 text-base mb-5">Subscribe to our newsletter for the latest updates</p>
+                    @if(session('newsletter_success'))
+                        <p class="text-green-400 text-sm mb-3">{{ session('newsletter_success') }}</p>
+                    @endif
+                    @if(session('newsletter_error'))
+                        <p class="text-red-400 text-sm mb-3">{{ session('newsletter_error') }}</p>
+                    @endif
+                    <form action="{{ route('newsletter.subscribe') }}" method="POST" class="newsletter-form relative mt-[30px]">
+                        @csrf
+                        <input type="email" name="email" placeholder="Email address" required
+                               class="w-full h-[52px] bg-white/10 border border-white/20 rounded-[30px] px-5 pr-[70px] text-white text-sm placeholder-white/40 outline-none focus:border-[#3E80FF] transition-all" />
+                        <div class="button absolute right-0 top-0">
+                            <button type="submit" class="sub-btn h-[52px] w-[52px] flex items-center justify-center bg-white/20 rounded-[30px] text-white hover:bg-[#3E80FF] transition-all duration-300">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="copyright-area">
+        <div class="container mx-auto px-4">
+            <div class="inner-content border-t border-white/10 pt-[30px] pb-[30px] mt-20 max-lg:mt-[50px]">
+                <div class="flex flex-col lg:flex-row items-center justify-between">
+                    <p class="text-white text-sm">&copy; {{ date('Y') }} S6WeightCalculator. All rights reserved</p>
+                    <p class="text-white text-sm mt-2 lg:mt-0 lg:text-right">Designed and Developed by Abonga</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+{{-- ===== SCROLL TO TOP ===== --}}
+<a href="#" x-show="scrollTop" x-cloak @click.prevent="window.scrollTo({top: 0, behavior: 'smooth'})"
+   class="scroll-top fixed bottom-8 right-8 w-[45px] h-[45px] flex items-center justify-center bg-[#3E80FF] text-white rounded-[5px] z-50 transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+    <svg class="w-4 h-4 fill-current" viewBox="0 0 512 512"><path d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"/></svg>
+</a>
+</body>
+</html>

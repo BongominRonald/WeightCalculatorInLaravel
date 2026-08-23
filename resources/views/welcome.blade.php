@@ -132,7 +132,7 @@
 </header>
 
 {{-- ===== HERO ===== --}}
-<section class="hero-area relative bg-[#24126A] overflow-hidden pt-[180px] pb-[180px]">
+<section class="hero-area relative bg-[#24126A] overflow-hidden pt-[130px] pb-[55px] lg:pt-[180px] lg:pb-[110px]">
     <div class="container mx-auto px-4">
         <div class="flex flex-wrap items-center -mx-4">
             <div class="w-full lg:w-5/12 px-4">
@@ -148,7 +148,7 @@
                         </span>
                     </h1>
                     <p class="text-white text-base leading-7 mt-5 wow fadeInUp" data-wow-delay=".6s">Calculate your O-Level and A-Level admission weight. Discover which Ugandan university you qualify for in seconds.</p>
-                    <div class="button mt-[50px] wow fadeInUp" data-wow-delay=".8s">
+                    <div class="button mt-8 lg:mt-[50px] wow fadeInUp" data-wow-delay=".8s">
                         <a href="{{ route('register') }}" class="inline-block text-sm font-medium capitalize px-[30px] py-[14px] bg-[#3E80FF] text-white rounded-[30px] transition-all duration-300 hover:bg-[#24126A]">Discover More</a>
                     </div>
                 </div>
@@ -166,7 +166,7 @@
 </section>
 
 {{-- ===== FEATURES ===== --}}
-<div class="feature section pt-[80px] pb-[110px] bg-white">
+<div class="feature section pt-[60px] pb-[70px] lg:pt-[80px] lg:pb-[110px] bg-white">
     <div class="container mx-auto px-4">
         <div class="text-center mb-[50px] px-6 md:px-12 lg:px-[100px] xl:px-[200px] max-lg:mb-[30px]">
             <h3 class="text-sm font-semibold text-[#3E80FF] uppercase mb-5 wow zoomIn" data-wow-delay=".2s">Why choose us</h3>
@@ -176,7 +176,7 @@
 
         <div class="flex flex-wrap -mx-4">
             <div class="w-full md:w-1/2 lg:w-1/3 px-4 wow fadeInUp" data-wow-delay=".2s">
-                <div class="feature-box min-h-[300px] mt-[30px] rounded-[20px] bg-white shadow-[0_0_30px_rgba(81,94,125,0.082)] p-[40px_50px] text-center transition-all duration-300 border-t-[3px] border-b-[3px] border-[#F4F7FA] hover:scale-105 hover:border-t-[#3E80FF] hover:border-b-[#3E80FF]">
+                <div class="feature-box min-h-0 lg:min-h-[300px] mt-[30px] rounded-[20px] bg-white shadow-[0_0_30px_rgba(81,94,125,0.082)] p-[35px_25px] lg:p-[40px_50px] text-center transition-all duration-300 border-t-[3px] border-b-[3px] border-[#F4F7FA] hover:scale-105 hover:border-t-[#3E80FF] hover:border-b-[#3E80FF]">
                     <div class="tumb">
                         <svg class="h-[150px] mx-auto text-[#3E80FF]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
                     </div>
@@ -185,7 +185,7 @@
                 </div>
             </div>
             <div class="w-full md:w-1/2 lg:w-1/3 px-4 wow fadeInUp" data-wow-delay=".4s">
-                <div class="feature-box min-h-[300px] mt-[30px] rounded-[20px] bg-white shadow-[0_0_30px_rgba(81,94,125,0.082)] p-[40px_50px] text-center transition-all duration-300 border-t-[3px] border-b-[3px] border-[#F4F7FA] hover:scale-105 hover:border-t-[#3E80FF] hover:border-b-[#3E80FF]">
+                <div class="feature-box min-h-0 lg:min-h-[300px] mt-[30px] rounded-[20px] bg-white shadow-[0_0_30px_rgba(81,94,125,0.082)] p-[35px_25px] lg:p-[40px_50px] text-center transition-all duration-300 border-t-[3px] border-b-[3px] border-[#F4F7FA] hover:scale-105 hover:border-t-[#3E80FF] hover:border-b-[#3E80FF]">
                     <div class="tumb">
                         <svg class="h-[150px] mx-auto text-[#3E80FF]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
                     </div>
@@ -194,7 +194,7 @@
                 </div>
             </div>
             <div class="w-full md:w-1/2 lg:w-1/3 px-4 wow fadeInUp" data-wow-delay=".6s">
-                <div class="feature-box min-h-[300px] mt-[30px] rounded-[20px] bg-white shadow-[0_0_30px_rgba(81,94,125,0.082)] p-[40px_50px] text-center transition-all duration-300 border-t-[3px] border-b-[3px] border-[#F4F7FA] hover:scale-105 hover:border-t-[#3E80FF] hover:border-b-[#3E80FF]">
+                <div class="feature-box min-h-0 lg:min-h-[300px] mt-[30px] rounded-[20px] bg-white shadow-[0_0_30px_rgba(81,94,125,0.082)] p-[35px_25px] lg:p-[40px_50px] text-center transition-all duration-300 border-t-[3px] border-b-[3px] border-[#F4F7FA] hover:scale-105 hover:border-t-[#3E80FF] hover:border-b-[#3E80FF]">
                     <div class="tumb">
                         <svg class="h-[150px] mx-auto text-[#3E80FF]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/></svg>
                     </div>
@@ -209,7 +209,7 @@
 {{-- ===== CALL TO ACTION ===== --}}
 <section class="call-action bg-[#F4F7FA]">
     <div class="container mx-auto px-4">
-        <div class="inner-content relative py-20 rounded-[10px] z-0 overflow-hidden">
+        <div class="inner-content relative py-12 lg:py-20 rounded-[10px] z-0 overflow-hidden">
             <div class="flex flex-wrap items-center -mx-4">
                 <div class="w-full lg:w-1/2 px-4">
                     <div class="text">
@@ -231,7 +231,7 @@
 </section>
 
 {{-- ===== FOOTER ===== --}}
-<footer class="footer bg-[#24126A] pt-[110px] pb-0 relative">
+<footer class="footer bg-[#24126A] pt-[60px] pb-0 lg:pt-[110px] relative">
     <div class="container mx-auto px-4">
         <div class="flex flex-wrap -mx-4">
             <div class="w-full lg:w-4/12 px-4 mb-10 lg:mb-0">

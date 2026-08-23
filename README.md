@@ -167,7 +167,7 @@ The application uses Uganda UNEB grading systems:
 
 ## Deployment
 
-This app is configured for **Vercel** (free Hobby tier) with a **Neon Postgres** database. The `vercel.json` in the repo root wires everything up: PHP runtime, static asset serving, dependency install, Vite build, and automatic migrations on every deploy.
+This app is configured for **Vercel** (free Hobby tier) with a **Neon Postgres** database. The `vercel.json` in the repo root wires everything up: PHP runtime, static asset serving, and the Vite build. Composer dependencies are installed automatically by the `vercel-php` runtime when it bundles the serverless function.
 
 ### Step 1 — Create the database (free)
 
@@ -209,7 +209,8 @@ Add `https://your-app.vercel.app/auth/google/callback` under **Credentials → A
 
 - All non-static requests are rewritten to `api/index.php`, which boots Laravel via the [`vercel-php`](https://github.com/vercel-community/php) serverless runtime.
 - Static assets (`/build/*`, `/images/*`, `/favicon.svg`, …) are served directly from `public/` by Vercel's CDN — filesystem wins over rewrites.
-- Every deploy runs `composer install --no-dev`, `npm ci && npm run build`, then `php artisan migrate --force`.
+- On deploy, the `vercel-php` runtime runs `composer install` internally, and Vercel runs `npm ci && npm run build`.
+- Database schema changes are applied **manually** from your machine (see the Neon troubleshooting section above) — the serverless build environment has no PHP on its PATH.
 - Serverless has no background workers and a read-only filesystem, hence `QUEUE_CONNECTION=sync`, database-backed sessions/cache, stderr logs, and compiled views redirected to `/tmp`.
 
 ### Troubleshooting local connection to Neon (XAMPP)

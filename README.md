@@ -212,6 +212,21 @@ Add `https://your-app.vercel.app/auth/google/callback` under **Credentials → A
 - Every deploy runs `composer install --no-dev`, `npm ci && npm run build`, then `php artisan migrate --force`.
 - Serverless has no background workers and a read-only filesystem, hence `QUEUE_CONNECTION=sync`, database-backed sessions/cache, stderr logs, and compiled views redirected to `/tmp`.
 
+### Troubleshooting local connection to Neon (XAMPP)
+
+XAMPP's PHP ships an old `libpq` without SNI support, which Neon requires:
+
+1. In `C:\xampp\php\php.ini`, enable `extension=pgsql` **before** `extension=pdo_pgsql`.
+2. Pass Neon's router the endpoint ID via env var when running artisan commands:
+   ```powershell
+   $env:DB_CONNECTION='pgsql'
+   $env:DB_URL='<your-neon-url>'
+   $env:DB_PORT='5432'   # .env's DB_PORT=3306 would otherwise override the URL
+   $env:PGOPTIONS='endpoint=<first-part-of-your-host>'
+   php artisan migrate --force
+   ```
+3. On Vercel none of this is needed — its runtime has modern `libpq`, so plain `DB_URL` works.
+
 ### Free-tier notes
 
 - Cold starts of ~1–2s after inactivity are normal.

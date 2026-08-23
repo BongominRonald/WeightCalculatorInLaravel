@@ -11,10 +11,30 @@
         }
     },
 
-    "rewrites": [
+    "routes": [
         {
-            "source": "/(.*)",
-            "destination": "/api/index.php"
+            "src": "/build/(.*)",
+            "dest": "/build/$1"
+        },
+        {
+            "src": "/images/(.*)",
+            "dest": "/images/$1"
+        },
+        {
+            "src": "/Better/(.*)",
+            "dest": "/Better/$1"
+        },
+        {
+            "src": "/favicon\\.(svg|ico)$",
+            "dest": "/$0"
+        },
+        {
+            "src": "/robots\\.txt$",
+            "dest": "/$0"
+        },
+        {
+            "src": "/(.*)",
+            "dest": "/api/index.php"
         }
     ],
 

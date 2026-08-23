@@ -167,15 +167,55 @@ The application uses Uganda UNEB grading systems:
 
 ## Deployment
 
-1. Set `APP_ENV=production` and `APP_DEBUG=false`
-2. Configure production database in `.env`
-3. Set up proper mail driver
-4. Configure Google OAuth credentials
-5. Run `composer install --optimize-autoloader --no-dev`
-6. Run `npm run build`
-7. Run `php artisan config:cache && php artisan route:cache && php artisan view:cache`
-8. Set up queue worker: `php artisan queue:work`
-9. Configure web server (Nginx/Apache) to point to `public/`
+This app is configured for **Vercel** (free Hobby tier) with a **Neon Postgres** database. The `vercel.json` in the repo root wires everything up: PHP runtime, static asset serving, dependency install, Vite build, and automatic migrations on every deploy.
+
+### Step 1 — Create the database (free)
+
+1. Sign up at [neon.tech](https://neon.tech) and create a project.
+2. Copy the connection string (looks like `postgres://user:pass@host/dbname?sslmode=require`).
+
+### Step 2 — Import the repo into Vercel
+
+1. Go to [vercel.com/new](https://vercel.com/new) and import this GitHub repository.
+2. Vercel reads `vercel.json` automatically — no framework preset needed.
+
+### Step 3 — Add environment variables in the Vercel dashboard
+
+| Key | Value |
+|---|---|
+| `APP_ENV` | `production` |
+| `APP_DEBUG` | `false` |
+| `APP_NAME` | `S6WeightCalculator` |
+| `APP_KEY` | Generate locally: `php artisan key:generate --show` |
+| `APP_URL` | `https://your-app.vercel.app` |
+| `LOG_CHANNEL` | `stderr` |
+| `VIEW_COMPILED_PATH` | `/tmp/views` |
+| `SESSION_SECURE_COOKIE` | `true` |
+| `DB_CONNECTION` | `pgsql` |
+| `DB_URL` | your Neon connection string |
+| `QUEUE_CONNECTION` | `sync` |
+| `SESSION_DRIVER` | `database` |
+| `CACHE_STORE` | `database` |
+| `MAIL_MAILER` | `smtp` + your SMTP settings (`MAIL_HOST`, `MAIL_PORT`, `MAIL_USERNAME`, `MAIL_PASSWORD`, `MAIL_ENCRYPTION=tls`) |
+| `GOOGLE_CLIENT_ID` | your Google OAuth client ID |
+| `GOOGLE_CLIENT_SECRET` | your Google OAuth client secret |
+| `GOOGLE_REDIRECT` | `https://your-app.vercel.app/auth/google/callback` |
+
+### Step 4 — Update Google Cloud Console
+
+Add `https://your-app.vercel.app/auth/google/callback` under **Credentials → Authorized redirect URIs**.
+
+### How it works
+
+- All non-static requests are rewritten to `api/index.php`, which boots Laravel via the [`vercel-php`](https://github.com/vercel-community/php) serverless runtime.
+- Static assets (`/build/*`, `/images/*`, `/favicon.svg`, …) are served directly from `public/` by Vercel's CDN — filesystem wins over rewrites.
+- Every deploy runs `composer install --no-dev`, `npm ci && npm run build`, then `php artisan migrate --force`.
+- Serverless has no background workers and a read-only filesystem, hence `QUEUE_CONNECTION=sync`, database-backed sessions/cache, stderr logs, and compiled views redirected to `/tmp`.
+
+### Free-tier notes
+
+- Cold starts of ~1–2s after inactivity are normal.
+- Gmail SMTP works but is rate-limited; consider [Brevo](https://www.brevo.com) (300 emails/day free) if deliverability matters.
 
 ## License
 

@@ -107,7 +107,7 @@
 </header>
 
 <main>
-    <section class="bg-[#24126A] pt-[130px] pb-[70px] lg:pt-[160px] lg:pb-[110px] relative bg-cover bg-right" style="background-image: url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ccircle cx=%2290%22 cy=%2210%22 r=%2240%22 fill=%22white%22 opacity=%220.03%22/%3E%3Ccircle cx=%2210%22 cy=%2290%22 r=%2230%22 fill=%22white%22 opacity=%220.02%22/%3E%3C/svg%3E');">
+    <section class="bg-[#24126A] pt-[108px] pb-[55px] lg:pt-[140px] lg:pb-[85px] relative bg-cover bg-right" style="background-image: url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ccircle cx=%2290%22 cy=%2210%22 r=%2240%22 fill=%22white%22 opacity=%220.03%22/%3E%3Ccircle cx=%2210%22 cy=%2290%22 r=%2230%22 fill=%22white%22 opacity=%220.02%22/%3E%3C/svg%3E');">
         <div class="container mx-auto px-4 text-center relative z-[2]">
             <h2 class="font-['Spartan'] text-2xl font-bold text-white capitalize leading-7 wow fadeInUp" data-wow-delay=".3s">Contact Us</h2>
             <ul class="inline-flex items-center gap-2 mt-2.5 wow fadeInUp" data-wow-delay=".5s">
@@ -117,7 +117,7 @@
         </div>
     </section>
 
-    <section class="py-[60px] lg:py-[110px] bg-white">
+    <section class="py-[50px] lg:py-[80px] bg-white">
         <div class="container mx-auto px-4">
             <div class="max-w-[800px] mx-auto">
                 <div class="text-center mb-12">
@@ -153,7 +153,7 @@
     </section>
 </main>
 
-<footer class="bg-[#24126A] pt-[60px] pb-0 lg:pt-[110px]">
+<footer class="bg-[#24126A] pt-[50px] pb-0 lg:pt-[85px]">
     <div class="container mx-auto px-4">
         <div class="flex flex-wrap -mx-4">
             <div class="w-full lg:w-4/12 px-4 mb-10 lg:mb-0">

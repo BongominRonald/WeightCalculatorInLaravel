@@ -132,12 +132,12 @@
 </header>
 
 {{-- ===== HERO ===== --}}
-<section class="hero-area relative bg-[#24126A] overflow-hidden pt-[130px] pb-[55px] lg:pt-[180px] lg:pb-[110px]">
+<section class="hero-area relative bg-[#24126A] overflow-hidden pt-[104px] pb-[38px] lg:pt-[140px] lg:pb-[64px]">
     <div class="container mx-auto px-4">
         <div class="flex flex-wrap items-center -mx-4">
             <div class="w-full lg:w-5/12 px-4">
                 <div class="hero-content text-left">
-                    <h4 class="text-white font-semibold text-sm mb-5 wow fadeInUp" data-wow-delay=".2s">Start Your University Journey</h4>
+                    <h4 class="text-white font-semibold text-sm mb-3 wow fadeInUp" data-wow-delay=".2s">Start Your University Journey</h4>
                     <h1 class="font-['Spartan'] font-bold text-white text-4xl leading-tight capitalize mb-0 wow fadeInUp relative z-[1]" data-wow-delay=".4s">
                         Say goodbye to <br>admission
                         <span class="relative z-[1]">
@@ -147,8 +147,8 @@
                             </svg>
                         </span>
                     </h1>
-                    <p class="text-white text-base leading-7 mt-5 wow fadeInUp" data-wow-delay=".6s">Calculate your O-Level and A-Level admission weight. Discover which Ugandan university you qualify for in seconds.</p>
-                    <div class="button mt-8 lg:mt-[50px] wow fadeInUp" data-wow-delay=".8s">
+                    <p class="text-white text-base leading-7 mt-3 wow fadeInUp" data-wow-delay=".6s">Calculate your O-Level and A-Level admission weight. Discover which Ugandan university you qualify for in seconds.</p>
+                    <div class="button mt-6 wow fadeInUp" data-wow-delay=".8s">
                         <a href="{{ route('register') }}" class="inline-block text-sm font-medium capitalize px-[30px] py-[14px] bg-[#3E80FF] text-white rounded-[30px] transition-all duration-300 hover:bg-[#24126A]">Discover More</a>
                     </div>
                 </div>
@@ -166,9 +166,9 @@
 </section>
 
 {{-- ===== FEATURES ===== --}}
-<div class="feature section pt-[60px] pb-[70px] lg:pt-[80px] lg:pb-[110px] bg-white">
+<div class="feature section pt-[48px] pb-[44px] lg:pt-[64px] lg:pb-[68px] bg-white">
     <div class="container mx-auto px-4">
-        <div class="text-center mb-[50px] px-6 md:px-12 lg:px-[100px] xl:px-[200px] max-lg:mb-[30px]">
+        <div class="text-center mb-9 px-6 md:px-12 lg:px-[100px] xl:px-[200px]">
             <h3 class="text-sm font-semibold text-[#3E80FF] uppercase mb-5 wow zoomIn" data-wow-delay=".2s">Why choose us</h3>
             <h2 class="font-['Spartan'] text-4xl font-bold text-[#24126A] mb-5 capitalize leading-tight wow fadeInUp" data-wow-delay=".4s">Our features</h2>
             <p class="text-base leading-7 wow fadeInUp" data-wow-delay=".6s">Everything you need to calculate your university admission weight quickly and accurately.</p>
@@ -176,29 +176,29 @@
 
         <div class="flex flex-wrap -mx-4">
             <div class="w-full md:w-1/2 lg:w-1/3 px-4 wow fadeInUp" data-wow-delay=".2s">
-                <div class="feature-box min-h-0 lg:min-h-[300px] mt-[30px] rounded-[20px] bg-white shadow-[0_0_30px_rgba(81,94,125,0.082)] p-[35px_25px] lg:p-[40px_50px] text-center transition-all duration-300 border-t-[3px] border-b-[3px] border-[#F4F7FA] hover:scale-105 hover:border-t-[#3E80FF] hover:border-b-[#3E80FF]">
+                <div class="feature-box min-h-0 lg:min-h-[240px] mt-5 rounded-[20px] bg-white shadow-[0_0_30px_rgba(81,94,125,0.082)] p-[35px_25px] lg:p-[36px_36px] text-center transition-all duration-300 border-t-[3px] border-b-[3px] border-[#F4F7FA] hover:scale-105 hover:border-t-[#3E80FF] hover:border-b-[#3E80FF]">
                     <div class="tumb">
                         <svg class="h-[150px] mx-auto text-[#3E80FF]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
                     </div>
-                    <h4 class="text-title text-[#3b368c] font-['Spartan'] text-lg font-bold leading-7 mt-[30px] mb-[15px]">Instant Exchange</h4>
+                    <h4 class="text-title text-[#3b368c] font-['Spartan'] text-lg font-bold leading-7 mt-5 mb-2">Instant Exchange</h4>
                     <p class="text-sm leading-relaxed">Enter your UNEB O-Level and A-Level grades. Get your weighted admission score instantly with no delays.</p>
                 </div>
             </div>
             <div class="w-full md:w-1/2 lg:w-1/3 px-4 wow fadeInUp" data-wow-delay=".4s">
-                <div class="feature-box min-h-0 lg:min-h-[300px] mt-[30px] rounded-[20px] bg-white shadow-[0_0_30px_rgba(81,94,125,0.082)] p-[35px_25px] lg:p-[40px_50px] text-center transition-all duration-300 border-t-[3px] border-b-[3px] border-[#F4F7FA] hover:scale-105 hover:border-t-[#3E80FF] hover:border-b-[#3E80FF]">
+                <div class="feature-box min-h-0 lg:min-h-[240px] mt-5 rounded-[20px] bg-white shadow-[0_0_30px_rgba(81,94,125,0.082)] p-[35px_25px] lg:p-[36px_36px] text-center transition-all duration-300 border-t-[3px] border-b-[3px] border-[#F4F7FA] hover:scale-105 hover:border-t-[#3E80FF] hover:border-b-[#3E80FF]">
                     <div class="tumb">
                         <svg class="h-[150px] mx-auto text-[#3E80FF]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
                     </div>
-                    <h4 class="text-title text-[#3b368c] font-['Spartan'] text-lg font-bold leading-7 mt-[30px] mb-[15px]">Safe & Secure</h4>
+                    <h4 class="text-title text-[#3b368c] font-['Spartan'] text-lg font-bold leading-7 mt-5 mb-2">Safe & Secure</h4>
                     <p class="text-sm leading-relaxed">Your data is private and secure. Calculate your admission weight with full confidentiality.</p>
                 </div>
             </div>
             <div class="w-full md:w-1/2 lg:w-1/3 px-4 wow fadeInUp" data-wow-delay=".6s">
-                <div class="feature-box min-h-0 lg:min-h-[300px] mt-[30px] rounded-[20px] bg-white shadow-[0_0_30px_rgba(81,94,125,0.082)] p-[35px_25px] lg:p-[40px_50px] text-center transition-all duration-300 border-t-[3px] border-b-[3px] border-[#F4F7FA] hover:scale-105 hover:border-t-[#3E80FF] hover:border-b-[#3E80FF]">
+                <div class="feature-box min-h-0 lg:min-h-[240px] mt-5 rounded-[20px] bg-white shadow-[0_0_30px_rgba(81,94,125,0.082)] p-[35px_25px] lg:p-[36px_36px] text-center transition-all duration-300 border-t-[3px] border-b-[3px] border-[#F4F7FA] hover:scale-105 hover:border-t-[#3E80FF] hover:border-b-[#3E80FF]">
                     <div class="tumb">
                         <svg class="h-[150px] mx-auto text-[#3E80FF]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/></svg>
                     </div>
-                    <h4 class="text-title text-[#3b368c] font-['Spartan'] text-lg font-bold leading-7 mt-[30px] mb-[15px]">Instant Trading</h4>
+                    <h4 class="text-title text-[#3b368c] font-['Spartan'] text-lg font-bold leading-7 mt-5 mb-2">Instant Trading</h4>
                     <p class="text-sm leading-relaxed">Select essentials and desirable subjects. Compare your total weight against all Ugandan university cutoffs.</p>
                 </div>
             </div>
@@ -209,7 +209,7 @@
 {{-- ===== CALL TO ACTION ===== --}}
 <section class="call-action bg-[#F4F7FA]">
     <div class="container mx-auto px-4">
-        <div class="inner-content relative py-12 lg:py-20 rounded-[10px] z-0 overflow-hidden">
+        <div class="inner-content relative py-10 lg:py-14 rounded-[10px] z-0 overflow-hidden">
             <div class="flex flex-wrap items-center -mx-4">
                 <div class="w-full lg:w-1/2 px-4">
                     <div class="text">
@@ -231,7 +231,7 @@
 </section>
 
 {{-- ===== FOOTER ===== --}}
-<footer class="footer bg-[#24126A] pt-[60px] pb-0 lg:pt-[110px] relative">
+<footer class="footer bg-[#24126A] pt-[50px] pb-0 lg:pt-[80px] relative">
     <div class="container mx-auto px-4">
         <div class="flex flex-wrap -mx-4">
             <div class="w-full lg:w-4/12 px-4 mb-10 lg:mb-0">
@@ -297,7 +297,7 @@
     </div>
     <div class="copyright-area">
         <div class="container mx-auto px-4">
-            <div class="inner-content border-t border-white/10 pt-[30px] pb-[30px] mt-20 max-lg:mt-[50px]">
+            <div class="inner-content border-t border-white/10 pt-[30px] pb-[30px] mt-12">
                 <div class="flex flex-col lg:flex-row items-center justify-between">
                     <p class="text-white text-sm">&copy; {{ date('Y') }} S6WeightCalculator. All rights reserved</p>
                     <p class="text-white text-sm mt-2 lg:mt-0 lg:text-right">Designed and Developed by Abonga</p>

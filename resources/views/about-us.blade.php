@@ -138,13 +138,13 @@
     <div class="container mx-auto px-4">
         <div class="flex flex-wrap -mx-4">
             <div class="w-full lg:w-4/12 px-4 mb-10 lg:mb-0">
-                <div class="single-footer f-about pr-[30px] max-lg:pr-0 max-lg:text-center">
+                <div class="single-footer f-about pr-0 text-center">
                     <div class="logo mb-5">
                         <a href="/" class="text-2xl font-extrabold tracking-tight font-['Spartan'] text-white">S6<span class="text-[#3E80FF]">Weight</span>Calculator</a>
                     </div>
                     <p class="text-white/70 text-base leading-7 max-w-xs max-lg:mx-auto">Making university admission simple for every S6 student in Uganda.</p>
                     <h4 class="social-title text-white font-semibold text-xs block mb-5 mt-8">Follow Us On:</h4>
-                    <ul class="social flex items-center gap-[15px] max-lg:justify-center">
+                    <ul class="social flex items-center gap-[15px] justify-center">
                         <li><a href="https://www.tiktok.com/@abonga" target="_blank" class="text-white hover:text-[#3E80FF] transition-all duration-300"><svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg></a></li>
                         <li><a href="https://wa.me/256774120185" target="_blank" class="text-white hover:text-[#3E80FF] transition-all duration-300"><svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-1.102-1.016-1.847-2.27-2.063-2.654-.216-.384-.023-.592.163-.784.168-.172.374-.45.562-.674.187-.225.25-.386.374-.644.125-.258.062-.484-.032-.678-.093-.194-.67-1.618-.92-2.216-.242-.579-.487-.5-.67-.508-.173-.008-.372-.01-.57-.01-.199 0-.523.074-.797.372-.274.298-1.043 1.02-1.043 2.488s1.07 2.887 1.22 3.088c.149.2 2.108 3.22 5.108 4.517.714.31 1.27.496 1.704.635.714.227 1.364.195 1.877.118.574-.088 1.767-.721 2.016-1.418.248-.697.248-1.295.174-1.42-.074-.125-.273-.198-.57-.347m-5.472 6.868V21.25a9.25 9.25 0 110-18.5 9.25 9.25 0 110 18.5m0-20.25a11 11 0 100 22 11 11 0 000-22z"/></svg></a></li>
                     </ul>

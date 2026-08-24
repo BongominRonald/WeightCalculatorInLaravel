@@ -248,7 +248,7 @@
                 </div>
             </div>
             <div class="w-full md:w-1/2 lg:w-2/12 px-4 mb-10 lg:mb-0">
-                <div class="single-footer f-link">
+                <div class="single-footer f-link text-center">
                     <h3 class="text-white font-['Spartan'] text-lg font-semibold mb-[35px]">Solutions</h3>
                     <ul class="space-y-[15px]">
                         <li><a href="{{ route('login') }}" class="text-white text-sm font-medium hover:text-[#3E80FF] transition-all duration-300">Sign In</a></li>
@@ -257,7 +257,7 @@
                 </div>
             </div>
             <div class="w-full md:w-1/2 lg:w-2/12 px-4 mb-10 lg:mb-0">
-                <div class="single-footer f-link">
+                <div class="single-footer f-link text-center">
                     <h3 class="text-white font-['Spartan'] text-lg font-semibold mb-[35px]">Support</h3>
                     <ul class="space-y-[15px]">
                         <li><a href="{{ route('contact') }}" class="text-white text-sm font-medium hover:text-[#3E80FF] transition-all duration-300">Contact</a></li>
@@ -266,7 +266,7 @@
                 </div>
             </div>
             <div class="w-full md:w-1/2 lg:w-4/12 px-4 mb-10 lg:mb-0">
-                <div class="single-footer newsletter">
+                <div class="single-footer newsletter text-center">
                     <h3 class="text-white font-['Spartan'] text-lg font-semibold mb-[35px]">Subscribe</h3>
                     <p class="text-white/70 text-base mb-5">Subscribe to our newsletter for the latest updates</p>
                     @if(session('newsletter_success'))
@@ -292,7 +292,7 @@
     <div class="copyright-area">
         <div class="container mx-auto px-4">
             <div class="inner-content border-t border-white/10 pt-[30px] pb-[30px] mt-12">
-                <div class="flex flex-col lg:flex-row items-center justify-between">
+                <div class="flex flex-col items-center gap-1.5">
                     <p class="text-white text-sm">&copy; {{ date('Y') }} S6WeightCalculator. All rights reserved</p>
                     <p class="text-white text-sm mt-2 lg:mt-0 lg:text-right">Designed and Developed by Abonga</p>
                 </div>

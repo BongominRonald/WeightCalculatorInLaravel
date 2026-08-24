@@ -147,7 +147,7 @@
                 </div>
             </div>
             <div class="w-full md:w-1/2 lg:w-2/12 px-4 mb-10 lg:mb-0">
-                <div class="single-footer f-link">
+                <div class="single-footer f-link text-center">
                     <h3 class="text-white font-['Spartan'] text-lg font-semibold mb-[35px]">Solutions</h3>
                     <ul class="space-y-[15px]">
                         <li><a href="{{ route('login') }}" class="text-white text-sm font-medium hover:text-[#3E80FF] transition-all duration-300">Sign In</a></li>
@@ -156,7 +156,7 @@
                 </div>
             </div>
             <div class="w-full md:w-1/2 lg:w-2/12 px-4 mb-10 lg:mb-0">
-                <div class="single-footer f-link">
+                <div class="single-footer f-link text-center">
                     <h3 class="text-white font-['Spartan'] text-lg font-semibold mb-[35px]">Support</h3>
                     <ul class="space-y-[15px]">
                         <li><a href="{{ route('contact') }}" class="text-white text-sm font-medium hover:text-[#3E80FF] transition-all duration-300">Contact</a></li>
@@ -190,7 +190,7 @@
     </div>
     <div class="border-t border-white/10 mt-20">
         <div class="container mx-auto px-4">
-            <div class="flex flex-col lg:flex-row items-center justify-between py-8">
+            <div class="flex flex-col items-center gap-1.5 py-8">
                 <p class="text-white/60 text-sm">&copy; {{ date('Y') }} {{ config('app.name', 'S6WeightCalculator') }}. All rights reserved</p>
                 <p class="text-white/60 text-sm mt-2 lg:mt-0">Designed and Developed by Abonga</p>
             </div>

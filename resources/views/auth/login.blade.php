@@ -172,7 +172,7 @@
                         @error('password')<p class="text-red-500 text-xs mt-1.5">{{ $message }}</p>@enderror
                     </div>
 
-                    <div class="flex items-center justify-center gap-3 mb-6">
+                    <div class="flex flex-wrap items-center justify-center gap-x-7 gap-y-1 mb-6">
                         <label class="flex items-center gap-2 text-sm text-[#727272] cursor-pointer">
                             <input type="checkbox" name="remember" id="remember" class="w-4 h-4 accent-[#3E80FF]" />
                             <span>Remember me</span>

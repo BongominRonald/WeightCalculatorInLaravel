@@ -56,7 +56,7 @@
                         <x-input-error :messages="$errors->get('subsidiary')" class="mt-2" />
                     </div>
 
-                    <div class="flex items-center justify-center gap-3 mt-6">
+                    <div class="flex flex-wrap items-center justify-center gap-x-7 gap-y-2 mt-6">
                         <a href="{{ route('olevel.scores') }}" class="text-[#3E80FF] hover:text-[#24126A] underline text-sm transition-all">Back to O-Level scores</a>
                         <x-primary-button>{{ __('Save & Continue') }}</x-primary-button>
                     </div>

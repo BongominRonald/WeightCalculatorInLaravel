@@ -132,7 +132,7 @@
     <div class="container mx-auto px-4">
         <div class="flex flex-wrap items-center -mx-4">
             <div class="w-full lg:w-5/12 px-4">
-                <div class="hero-content text-left">
+                <div class="hero-content text-center">
                     <h4 class="text-white font-semibold text-sm mb-3 wow fadeInUp" data-wow-delay=".2s">Start Your University Journey</h4>
                     <h1 class="font-['Spartan'] font-bold text-white text-4xl leading-tight capitalize mb-0 wow fadeInUp relative z-[1]" data-wow-delay=".4s">
                         Say goodbye to <br>admission
@@ -150,7 +150,7 @@
                 </div>
             </div>
             <div class="w-full lg:w-7/12 px-4">
-                <div class="hero-image relative z-0 max-lg:text-left max-lg:-ml-3 lg:text-center">
+                <div class="hero-image relative z-0 text-center">
                     <img src="{{ asset('images/Realman.png') }}" alt="Student"
                          class="w-64 h-64 md:w-[400px] md:h-[400px] object-cover shadow-[0_20px_60px_rgba(0,0,0,0.35)]">
                 </div>
@@ -206,7 +206,7 @@
         <div class="inner-content relative py-10 lg:py-14 rounded-[10px] z-0 overflow-hidden">
             <div class="flex flex-wrap items-center -mx-4">
                 <div class="w-full lg:w-1/2 px-4">
-                    <div class="text">
+                    <div class="text text-center">
                         <h2 class="font-['Spartan'] text-3xl font-bold text-[#081828] leading-tight">
                             You are using free<br>
                             <span class="block text-[#3E80FF]">S6WeightCalculator.</span>
@@ -215,7 +215,7 @@
                     </div>
                 </div>
                 <div class="w-full lg:w-1/2 px-4 mt-8 lg:mt-0">
-                    <div class="button lg:float-right max-lg:text-center">
+                    <div class="button text-center">
                         <a href="{{ route('register') }}" class="inline-block text-sm font-medium capitalize px-[30px] py-[14px] bg-[#3E80FF] text-white rounded-[30px] transition-all duration-300 hover:bg-[#24126A]">Get Started Now</a>
                     </div>
                 </div>
@@ -237,7 +237,7 @@
                     </div>
                     <p class="text-white/70 text-base leading-7 max-w-xs max-lg:mx-auto">Making university admission simple for every S6 student in Uganda.</p>
                     <h4 class="social-title text-white font-semibold text-xs block mb-5 mt-8">Follow Us On:</h4>
-                    <ul class="social flex items-center gap-[15px] max-lg:justify-center">
+                    <ul class="social flex items-center gap-[15px] justify-center">
 <li><a href="https://www.tiktok.com/@abonga" target="_blank" class="text-white hover:text-[#3E80FF] transition-all duration-300">
     <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>
 </a></li>
@@ -266,7 +266,7 @@
                 </div>
             </div>
             <div class="w-full md:w-1/2 lg:w-4/12 px-4 mb-10 lg:mb-0">
-                <div class="single-footer newsletter lg:pl-[80px]">
+                <div class="single-footer newsletter">
                     <h3 class="text-white font-['Spartan'] text-lg font-semibold mb-[35px]">Subscribe</h3>
                     <p class="text-white/70 text-base mb-5">Subscribe to our newsletter for the latest updates</p>
                     @if(session('newsletter_success'))

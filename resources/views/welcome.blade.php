@@ -225,12 +225,12 @@
 </section>
 
 {{-- ===== FOOTER ===== --}}
-<footer class="footer bg-[#24126A] pt-[50px] pb-0 lg:pt-[80px] relative">
+<footer class="footer bg-[#24126A] pt-[36px] pb-0 lg:pt-[80px] relative">
     <div class="container mx-auto px-4">
         <div class="flex flex-wrap -mx-4">
-            <div class="w-full lg:w-4/12 px-4 mb-10 lg:mb-0">
+            <div class="w-full lg:w-4/12 px-4 mb-7 lg:mb-0">
                 <div class="single-footer f-about pr-[30px] max-lg:pr-0 max-lg:text-center">
-                    <div class="logo mb-5">
+                    <div class="logo mb-3 lg:mb-5">
                         <a href="/" class="text-2xl font-extrabold tracking-tight font-['Spartan'] text-white">
                             S6<span class="text-[#3E80FF]">Weight</span>Calculator
                         </a>
@@ -247,27 +247,27 @@
                     </ul>
                 </div>
             </div>
-            <div class="w-full md:w-1/2 lg:w-2/12 px-4 mb-10 lg:mb-0">
+            <div class="w-1/2 md:w-1/2 lg:w-2/12 px-4 mb-7 lg:mb-0">
                 <div class="single-footer f-link text-center">
-                    <h3 class="text-white font-['Spartan'] text-lg font-semibold mb-[35px]">Solutions</h3>
-                    <ul class="space-y-[15px]">
+                    <h3 class="text-white font-['Spartan'] text-lg font-semibold mb-4 lg:mb-[35px]">Solutions</h3>
+                    <ul class="space-y-2.5 lg:space-y-[15px]">
                         <li><a href="{{ route('login') }}" class="text-white text-sm font-medium hover:text-[#3E80FF] transition-all duration-300">Sign In</a></li>
                         <li><a href="{{ route('register') }}" class="text-white text-sm font-medium hover:text-[#3E80FF] transition-all duration-300">Sign Up</a></li>
                     </ul>
                 </div>
             </div>
-            <div class="w-full md:w-1/2 lg:w-2/12 px-4 mb-10 lg:mb-0">
+            <div class="w-1/2 md:w-1/2 lg:w-2/12 px-4 mb-7 lg:mb-0">
                 <div class="single-footer f-link text-center">
-                    <h3 class="text-white font-['Spartan'] text-lg font-semibold mb-[35px]">Support</h3>
-                    <ul class="space-y-[15px]">
+                    <h3 class="text-white font-['Spartan'] text-lg font-semibold mb-4 lg:mb-[35px]">Support</h3>
+                    <ul class="space-y-2.5 lg:space-y-[15px]">
                         <li><a href="{{ route('contact') }}" class="text-white text-sm font-medium hover:text-[#3E80FF] transition-all duration-300">Contact</a></li>
-                        <li><a href="mailto:abonga029@gmail.com" class="text-white text-sm font-medium hover:text-[#3E80FF] transition-all duration-300">abonga029@gmail.com</a></li>
+                        <li><a href="mailto:abonga029@gmail.com" class="text-white text-sm font-medium hover:text-[#3E80FF] transition-all duration-300 break-all">abonga029@gmail.com</a></li>
                     </ul>
                 </div>
             </div>
-            <div class="w-full md:w-1/2 lg:w-4/12 px-4 mb-10 lg:mb-0">
+            <div class="w-full md:w-full lg:w-4/12 px-4 mb-7 lg:mb-0">
                 <div class="single-footer newsletter text-center">
-                    <h3 class="text-white font-['Spartan'] text-lg font-semibold mb-[35px]">Subscribe</h3>
+                    <h3 class="text-white font-['Spartan'] text-lg font-semibold mb-4 lg:mb-[35px]">Subscribe</h3>
                     <p class="text-white/70 text-base mb-5">Subscribe to our newsletter for the latest updates</p>
                     @if(session('newsletter_success'))
                         <p class="text-green-400 text-sm mb-3">{{ session('newsletter_success') }}</p>
@@ -275,7 +275,7 @@
                     @if(session('newsletter_error'))
                         <p class="text-red-400 text-sm mb-3">{{ session('newsletter_error') }}</p>
                     @endif
-                    <form action="{{ route('newsletter.subscribe') }}" method="POST" class="newsletter-form relative mt-[30px]">
+                    <form action="{{ route('newsletter.subscribe') }}" method="POST" class="newsletter-form relative mt-4 lg:mt-[30px]">
                         @csrf
                         <input type="email" name="email" placeholder="Email address" required
                                class="w-full h-[52px] bg-white/10 border border-white/20 rounded-[30px] px-5 pr-[70px] text-white text-sm placeholder-white/40 outline-none focus:border-[#3E80FF] transition-all" />
@@ -291,7 +291,7 @@
     </div>
     <div class="copyright-area">
         <div class="container mx-auto px-4">
-            <div class="inner-content border-t border-white/10 pt-[30px] pb-[30px] mt-12">
+            <div class="inner-content border-t border-white/10 pt-[30px] pb-[30px] max-lg:mt-9 lg:mt-12">
                 <div class="flex flex-col items-center gap-1.5">
                     <p class="text-white text-sm">&copy; {{ date('Y') }} S6WeightCalculator. All rights reserved</p>
                     <p class="text-white text-sm mt-2 lg:mt-0 lg:text-right">Designed and Developed by Abonga</p>

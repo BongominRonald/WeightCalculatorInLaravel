@@ -58,7 +58,7 @@
                         </table>
                     </div>
 
-                    <div class="flex items-center justify-between mt-6">
+                    <div class="flex flex-col sm:flex-row items-center justify-center gap-3 mt-6">
                         <a href="{{ route('olevel.subjects') }}" class="text-[#3E80FF] hover:text-[#24126A] underline text-sm transition-all">Back to subjects</a>
                         <x-primary-button>{{ __('Save & Continue') }}</x-primary-button>
                     </div>

@@ -46,7 +46,7 @@
                         </div>
                     </div>
 
-                    <div class="flex items-center justify-end mt-6">
+                    <div class="flex items-center justify-center mt-6">
                         <x-primary-button>{{ __('Save & Continue') }}</x-primary-button>
                     </div>
                 </form>

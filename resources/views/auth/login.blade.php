@@ -172,7 +172,7 @@
                         @error('password')<p class="text-red-500 text-xs mt-1.5">{{ $message }}</p>@enderror
                     </div>
 
-                    <div class="flex items-center justify-between mb-6">
+                    <div class="flex flex-col sm:flex-row items-center justify-center gap-3 mb-6">
                         <label class="flex items-center gap-2 text-sm text-[#727272] cursor-pointer">
                             <input type="checkbox" name="remember" id="remember" class="w-4 h-4 accent-[#3E80FF]" />
                             <span>Remember me</span>
@@ -252,7 +252,7 @@
     </div>
     <div class="border-t border-white/10 mt-20">
         <div class="container mx-auto px-4">
-            <div class="flex flex-col lg:flex-row items-center justify-between py-8">
+            <div class="flex flex-col items-center gap-1.5 py-8">
                 <p class="text-white/60 text-sm">&copy; {{ date('Y') }} {{ config('app.name', 'S6WeightCalculator') }}. All rights reserved</p>
                 <p class="text-white/60 text-sm mt-2 lg:mt-0">Designed and Developed by <span class="text-white">Abonga</span></p>
             </div>

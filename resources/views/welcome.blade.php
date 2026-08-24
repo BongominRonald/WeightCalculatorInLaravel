@@ -19,10 +19,6 @@
     <style>
         [x-cloak] { display: none !important; }
         .navbar .nav-link:hover, .navbar .dropdown-item:hover { color: #3E80FF !important; background: transparent !important; }
-        @keyframes float {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-20px); }
-        }
     </style>
     <script>
         if (localStorage.getItem('dark') === 'true' || (!localStorage.getItem('dark') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
@@ -154,11 +150,9 @@
                 </div>
             </div>
             <div class="w-full lg:w-7/12 px-4">
-                <div class="hero-image text-center relative z-0">
-                    <div class="inline-block" style="animation: float 4s ease-in-out infinite;">
-                        <img src="{{ asset('images/Realman.png') }}" alt="Student"
-                             class="w-64 h-64 md:w-[400px] md:h-[400px] object-cover rounded-3xl shadow-[0_25px_80px_rgba(0,0,0,0.3)]">
-                    </div>
+                <div class="hero-image relative z-0 max-lg:text-left max-lg:mt-1 lg:text-center">
+                    <img src="{{ asset('images/Realman.png') }}" alt="Student"
+                         class="w-64 h-64 md:w-[400px] md:h-[400px] object-cover rounded-3xl shadow-[0_25px_80px_rgba(0,0,0,0.3)]">
                 </div>
             </div>
         </div>

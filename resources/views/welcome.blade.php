@@ -170,29 +170,29 @@
 
         <div class="flex flex-wrap -mx-4">
             <div class="w-full md:w-1/2 lg:w-1/3 px-4 wow fadeInUp" data-wow-delay=".2s">
-                <div class="feature-box min-h-0 lg:min-h-[240px] mt-5 rounded-[20px] bg-white shadow-[0_0_30px_rgba(81,94,125,0.082)] p-[35px_25px] lg:p-[36px_36px] text-center transition-all duration-300 border-t-[3px] border-b-[3px] border-[#F4F7FA] hover:scale-105 hover:border-t-[#3E80FF] hover:border-b-[#3E80FF]">
+                <div class="feature-box lg:min-h-[190px] mt-4 rounded-[20px] bg-white shadow-[0_0_30px_rgba(81,94,125,0.082)] p-[22px_16px] lg:p-[30px_26px] text-center transition-all duration-300 border-t-[3px] border-b-[3px] border-[#F4F7FA] hover:scale-105 hover:border-t-[#3E80FF] hover:border-b-[#3E80FF]">
                     <div class="tumb">
-                        <svg class="h-[80px] md:h-[96px] lg:h-[110px] mx-auto text-[#3E80FF]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+                        <svg class="h-[44px] md:h-[52px] lg:h-[60px] mx-auto text-[#3E80FF]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
                     </div>
-                    <h4 class="text-title text-[#3b368c] font-['Spartan'] text-lg font-bold leading-7 mt-5 mb-2">Instant Exchange</h4>
+                    <h4 class="text-title text-[#3b368c] font-['Spartan'] text-base font-bold leading-6 mt-4 mb-1.5">Instant Exchange</h4>
                     <p class="text-sm leading-relaxed">Enter your UNEB O-Level and A-Level grades. Get your weighted admission score instantly with no delays.</p>
                 </div>
             </div>
             <div class="w-full md:w-1/2 lg:w-1/3 px-4 wow fadeInUp" data-wow-delay=".4s">
-                <div class="feature-box min-h-0 lg:min-h-[240px] mt-5 rounded-[20px] bg-white shadow-[0_0_30px_rgba(81,94,125,0.082)] p-[35px_25px] lg:p-[36px_36px] text-center transition-all duration-300 border-t-[3px] border-b-[3px] border-[#F4F7FA] hover:scale-105 hover:border-t-[#3E80FF] hover:border-b-[#3E80FF]">
+                <div class="feature-box lg:min-h-[190px] mt-4 rounded-[20px] bg-white shadow-[0_0_30px_rgba(81,94,125,0.082)] p-[22px_16px] lg:p-[30px_26px] text-center transition-all duration-300 border-t-[3px] border-b-[3px] border-[#F4F7FA] hover:scale-105 hover:border-t-[#3E80FF] hover:border-b-[#3E80FF]">
                     <div class="tumb">
-                        <svg class="h-[80px] md:h-[96px] lg:h-[110px] mx-auto text-[#3E80FF]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
+                        <svg class="h-[44px] md:h-[52px] lg:h-[60px] mx-auto text-[#3E80FF]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
                     </div>
-                    <h4 class="text-title text-[#3b368c] font-['Spartan'] text-lg font-bold leading-7 mt-5 mb-2">Safe & Secure</h4>
+                    <h4 class="text-title text-[#3b368c] font-['Spartan'] text-base font-bold leading-6 mt-4 mb-1.5">Safe & Secure</h4>
                     <p class="text-sm leading-relaxed">Your data is private and secure. Calculate your admission weight with full confidentiality.</p>
                 </div>
             </div>
             <div class="w-full md:w-1/2 lg:w-1/3 px-4 wow fadeInUp" data-wow-delay=".6s">
-                <div class="feature-box min-h-0 lg:min-h-[240px] mt-5 rounded-[20px] bg-white shadow-[0_0_30px_rgba(81,94,125,0.082)] p-[35px_25px] lg:p-[36px_36px] text-center transition-all duration-300 border-t-[3px] border-b-[3px] border-[#F4F7FA] hover:scale-105 hover:border-t-[#3E80FF] hover:border-b-[#3E80FF]">
+                <div class="feature-box lg:min-h-[190px] mt-4 rounded-[20px] bg-white shadow-[0_0_30px_rgba(81,94,125,0.082)] p-[22px_16px] lg:p-[30px_26px] text-center transition-all duration-300 border-t-[3px] border-b-[3px] border-[#F4F7FA] hover:scale-105 hover:border-t-[#3E80FF] hover:border-b-[#3E80FF]">
                     <div class="tumb">
-                        <svg class="h-[80px] md:h-[96px] lg:h-[110px] mx-auto text-[#3E80FF]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/></svg>
+                        <svg class="h-[44px] md:h-[52px] lg:h-[60px] mx-auto text-[#3E80FF]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/></svg>
                     </div>
-                    <h4 class="text-title text-[#3b368c] font-['Spartan'] text-lg font-bold leading-7 mt-5 mb-2">Instant Trading</h4>
+                    <h4 class="text-title text-[#3b368c] font-['Spartan'] text-base font-bold leading-6 mt-4 mb-1.5">Instant Trading</h4>
                     <p class="text-sm leading-relaxed">Select essentials and desirable subjects. Compare your total weight against all Ugandan university cutoffs.</p>
                 </div>
             </div>

@@ -102,7 +102,7 @@
                         </div>
                     </div>
 
-                    <div class="flex flex-col sm:flex-row items-center justify-center gap-3 mt-6">
+                    <div class="flex items-center justify-center gap-3 mt-6">
                         <a href="{{ route('alevel.scores') }}" class="text-[#3E80FF] hover:text-[#24126A] underline text-sm transition-all">Back to A-Level scores</a>
                         <x-primary-button>{{ __('Calculate Weight') }}</x-primary-button>
                     </div>

@@ -146,7 +146,7 @@
                     </ul>
                 </div>
             </div>
-            <div class="w-1/2 md:w-1/2 lg:w-2/12 px-4 mb-7 lg:mb-0">
+            <div class="w-2/5 md:w-1/2 lg:w-2/12 px-4 mb-7 lg:mb-0">
                 <div class="single-footer f-link text-center">
                     <h3 class="text-white font-['Spartan'] text-lg font-semibold mb-4 lg:mb-[35px]">Solutions</h3>
                     <ul class="space-y-2.5 lg:space-y-[15px]">
@@ -155,12 +155,12 @@
                     </ul>
                 </div>
             </div>
-            <div class="w-1/2 md:w-1/2 lg:w-2/12 px-4 mb-7 lg:mb-0">
+            <div class="w-3/5 md:w-1/2 lg:w-2/12 px-4 mb-7 lg:mb-0">
                 <div class="single-footer f-link text-center">
                     <h3 class="text-white font-['Spartan'] text-lg font-semibold mb-4 lg:mb-[35px]">Support</h3>
                     <ul class="space-y-2.5 lg:space-y-[15px]">
                         <li><a href="{{ route('contact') }}" class="text-white text-sm font-medium hover:text-[#3E80FF] transition-all duration-300">Contact</a></li>
-                        <li><a href="mailto:abonga029@gmail.com" class="text-white text-sm font-medium hover:text-[#3E80FF] transition-all duration-300 break-all">abonga029@gmail.com</a></li>
+                        <li><a href="mailto:abonga029@gmail.com" class="text-white text-sm font-medium hover:text-[#3E80FF] transition-all duration-300">abonga029@gmail.com</a></li>
 
                     </ul>
                 </div>

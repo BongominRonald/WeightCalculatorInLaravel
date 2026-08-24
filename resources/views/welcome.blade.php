@@ -152,7 +152,7 @@
             <div class="w-full lg:w-7/12 px-4">
                 <div class="hero-image relative z-0 max-lg:text-left max-lg:-ml-3 lg:text-center">
                     <img src="{{ asset('images/Realman.png') }}" alt="Student"
-                         class="w-64 h-64 md:w-[400px] md:h-[400px] object-cover rounded-3xl shadow-[0_25px_80px_rgba(0,0,0,0.3)]">
+                         class="w-64 h-64 md:w-[400px] md:h-[400px] object-cover shadow-[0_20px_60px_rgba(0,0,0,0.35)]">
                 </div>
             </div>
         </div>

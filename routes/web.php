@@ -42,5 +42,10 @@ Route::view('/contact', 'contact')->name('contact');
 Route::post('/contact', [ContactController::class, 'send'])->name('contact.send');
 Route::view('/mail-success', 'mail-success')->name('mail-success');
 Route::post('/newsletter', [NewsletterController::class, 'subscribe'])->name('newsletter.subscribe');
+Route::get('/ads.txt', function () {
+    return response("google.com, pub-2252067205687343, DIRECT, f08c47fec0942fa0\n", 200, [
+        'Content-Type' => 'text/plain',
+    ]);
+});
 
 require __DIR__.'/auth.php';

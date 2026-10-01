@@ -33,6 +33,10 @@
             "dest": "/$0"
         },
         {
+            "src": "/ads\\.txt$",
+            "dest": "/$0"
+        },
+        {
             "src": "/sitemap\\.xml",
             "dest": "/sitemap.xml"
         },

@@ -7,6 +7,9 @@
 
         <title>{{ config('app.name', 'S6WeightCalculator') }}</title>
 
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2252067205687343"
+             crossorigin="anonymous"></script>
+
         <style>
             @import url("https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap");
             @import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap");

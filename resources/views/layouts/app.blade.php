@@ -7,6 +7,9 @@
 
         <title>{{ config('app.name', 'S6WeightCalculator') }}</title>
 
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2252067205687343"
+             crossorigin="anonymous"></script>
+
         <script>
             if (localStorage.getItem('dark') === 'true' || (!localStorage.getItem('dark') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
                 document.documentElement.classList.add('dark');

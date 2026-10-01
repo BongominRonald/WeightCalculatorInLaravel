@@ -69,6 +69,7 @@
                         <ul x-show="pages" x-cloak @click.outside="pages = false"
                             class="absolute left-0 top-full mt-0 min-w-[240px] bg-white shadow-[0_5px_20px_#0000001a] rounded-md py-[30px] px-[30px] space-y-[15px] z-50">
                             <li><a href="{{ route('about-us') }}" class="text-sm font-medium text-[#888] hover:text-[#3E80FF] transition-all duration-300 block">About Us</a></li>
+                            <li><a href="{{ route('privacy-policy') }}" class="text-sm font-medium text-[#888] hover:text-[#3E80FF] transition-all duration-300 block">Privacy Policy</a></li>
                             <li><a href="{{ route('login') }}" class="text-sm font-medium text-[#888] hover:text-[#3E80FF] transition-all duration-300 block">Sign In</a></li>
                             <li><a href="{{ route('register') }}" class="text-sm font-medium text-[#888] hover:text-[#3E80FF] transition-all duration-300 block">Sign Up</a></li>
                             <li><a href="{{ route('contact') }}" class="text-sm font-medium text-[#888] hover:text-[#3E80FF] transition-all duration-300 block">Contact</a></li>
@@ -95,6 +96,7 @@
                     </button>
                     <div x-show="mp" x-cloak class="ml-4 space-y-1">
                         <a href="{{ route('about-us') }}" @click="mOpen = false" class="block py-2 px-4 text-sm text-[#888] hover:text-[#3E80FF]">About Us</a>
+                        <a href="{{ route('privacy-policy') }}" @click="mOpen = false" class="block py-2 px-4 text-sm text-[#888] hover:text-[#3E80FF]">Privacy Policy</a>
                         <a href="{{ route('login') }}" @click="mOpen = false" class="block py-2 px-4 text-sm text-[#888] hover:text-[#3E80FF]">Sign In</a>
                         <a href="{{ route('register') }}" @click="mOpen = false" class="block py-2 px-4 text-sm text-[#888] hover:text-[#3E80FF]">Sign Up</a>
                         <a href="{{ route('contact') }}" @click="mOpen = false" class="block py-2 px-4 text-sm text-[#888] hover:text-[#3E80FF]">Contact</a>
@@ -166,6 +168,7 @@
                     <h3 class="text-white font-['Spartan'] text-lg font-semibold mb-4 lg:mb-[35px]">Support</h3>
                     <ul class="space-y-2.5 lg:space-y-[15px]">
                         <li><a href="{{ route('contact') }}" class="text-white text-sm font-medium hover:text-[#3E80FF] transition-all duration-300">Contact</a></li>
+                        <li><a href="{{ route('privacy-policy') }}" class="text-white text-sm font-medium hover:text-[#3E80FF] transition-all duration-300">Privacy Policy</a></li>
                         <li><a href="mailto:abonga029@gmail.com" class="text-white text-sm font-medium hover:text-[#3E80FF] transition-all duration-300">abonga029@gmail.com</a></li>
                     </ul>
                 </div>

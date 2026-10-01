@@ -38,6 +38,7 @@ Route::middleware(['auth'])->group(function () {
 });
 
 Route::view('/about-us', 'about-us')->name('about-us');
+Route::view('/privacy-policy', 'privacy-policy')->name('privacy-policy');
 Route::view('/contact', 'contact')->name('contact');
 Route::post('/contact', [ContactController::class, 'send'])->name('contact.send');
 Route::view('/mail-success', 'mail-success')->name('mail-success');

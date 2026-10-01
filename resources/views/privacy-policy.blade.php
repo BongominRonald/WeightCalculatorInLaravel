@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>Contact | {{ config('app.name', 'S6WeightCalculator') }}</title>
+    <title>Privacy Policy | {{ config('app.name', 'S6WeightCalculator') }}</title>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2252067205687343"
          crossorigin="anonymous"></script>
     <style>
@@ -20,7 +20,7 @@
 </head>
 <body x-data="{ dark: false, sticky: false, scrollTop: false, mOpen: false }"
       @scroll.window="sticky = (window.pageYOffset > 80) ? true : false; scrollTop = (window.pageYOffset > 300) ? true : false"
-      class="font-['DM_Sans'] text-[#727272] text-sm antialiased overflow-x-hidden">
+      class="font-['DM_Sans'] text-[#727272] text-sm antialiased overflow-x-hidden bg-[#F9FAFB] dark:bg-[#0B1120] dark:text-[#94A3B8]">
 
 <div class="preloader">
     <div class="preloader-inner">
@@ -33,52 +33,52 @@
 
 {{-- ===== HEADER ===== --}}
 <header class="absolute top-0 left-0 w-full z-50 transition-all duration-300"
-        :class="{'!fixed !bg-white shadow-[0_20px_50px_rgba(0,0,0,0.05)]': sticky}">
+        :class="{'!fixed !bg-white shadow-[0_20px_50px_rgba(0,0,0,0.05)] dark:!bg-[#111827]': sticky}">
     <div class="container mx-auto px-4">
         <div class="flex items-center justify-between py-4 lg:py-0">
             <a href="/" class="text-xl lg:text-2xl font-extrabold tracking-tight font-['Spartan'] text-white"
-               :class="sticky ? '!text-[#24126A]' : ''">
+               :class="sticky ? '!text-[#24126A] dark:!text-white' : ''">
                 S6<span class="text-[#3E80FF]">Weight</span>Calculator
             </a>
             <div class="flex items-center gap-2 lg:hidden">
                 <button onclick="document.documentElement.classList.toggle('dark');localStorage.setItem('dark',document.documentElement.classList.contains('dark'))"
                         class="p-2 rounded-full transition-all duration-300"
-                        :class="sticky ? 'text-[#24126A]' : 'text-white'">
+                        :class="sticky ? 'text-[#24126A] dark:text-white' : 'text-white'">
                     <svg class="w-5 h-5 block dark:hidden" fill="currentColor" viewBox="0 0 24 24"><path d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z"/></svg>
                     <svg class="w-5 h-5 hidden dark:block" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.25a.75.75 0 01.75.75v2.25a.75.75 0 01-1.5 0V3a.75.75 0 01.75-.75zM7.5 12a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM18.894 6.166a.75.75 0 00-1.06-1.06l-1.591 1.59a.75.75 0 101.06 1.061l1.591-1.59zM21.75 12a.75.75 0 01-.75.75h-2.25a.75.75 0 010-1.5H21a.75.75 0 01.75.75zM17.834 18.894a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 10-1.061 1.06l1.59 1.591zM12 18a.75.75 0 01.75.75V21a.75.75 0 01-1.5 0v-2.25A.75.75 0 0112 18zM7.758 17.303a.75.75 0 00-1.061-1.06l-1.591 1.59a.75.75 0 001.06 1.061l1.591-1.59zM6 12a.75.75 0 01-.75.75H3a.75.75 0 010-1.5h2.25A.75.75 0 016 12zM6.697 7.757a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 00-1.061 1.06l1.59 1.591z"/></svg>
                 </button>
                 <button class="p-2" @click="mOpen = !mOpen">
                     <span class="flex flex-col gap-1.5 w-6">
-                        <span class="block h-0.5 rounded bg-white transition-all duration-300" :class="sticky ? '!bg-[#24126A]' : ''" :class="{'rotate-45 translate-y-[7px]': mOpen}"></span>
-                        <span class="block h-0.5 rounded bg-white transition-all duration-300" :class="sticky ? '!bg-[#24126A]' : ''" x-show="!mOpen"></span>
-                        <span class="block h-0.5 rounded bg-white transition-all duration-300" :class="sticky ? '!bg-[#24126A]' : ''" :class="{'-rotate-45 -translate-y-[7px]': mOpen}"></span>
+                        <span class="block h-0.5 rounded bg-white transition-all duration-300" :class="sticky ? '!bg-[#24126A] dark:!bg-white' : ''" :class="{'rotate-45 translate-y-[7px]': mOpen}"></span>
+                        <span class="block h-0.5 rounded bg-white transition-all duration-300" :class="sticky ? '!bg-[#24126A] dark:!bg-white' : ''" x-show="!mOpen"></span>
+                        <span class="block h-0.5 rounded bg-white transition-all duration-300" :class="sticky ? '!bg-[#24126A] dark:!bg-white' : ''" :class="{'-rotate-45 -translate-y-[7px]': mOpen}"></span>
                     </span>
                 </button>
             </div>
             <div class="hidden lg:flex items-center">
                 <ul class="flex items-center gap-10 mx-auto">
                     <li><a href="/" class="text-sm font-medium capitalize transition-all duration-300 py-[35px] inline-flex items-center text-white/90 hover:text-white"
-                           :class="sticky ? '!text-[#24126A] hover:!text-[#3E80FF]' : ''">Home</a></li>
+                           :class="sticky ? '!text-[#24126A] dark:!text-white hover:!text-[#3E80FF]' : ''">Home</a></li>
                     <li class="relative" x-data="{ pages: false }" @mouseenter="pages = true" @mouseleave="pages = false">
                         <a href="#" class="text-sm font-medium capitalize transition-all duration-300 py-[35px] inline-flex items-center gap-1 text-white/90 hover:text-white"
-                           :class="sticky ? '!text-[#24126A] hover:!text-[#3E80FF]' : ''"
+                           :class="sticky ? '!text-[#24126A] dark:!text-white hover:!text-[#3E80FF]' : ''"
                            @click.prevent="pages = !pages">
                             Pages
                             <svg class="w-3 h-3 fill-current transition-transform" :class="{ 'rotate-180': pages }" viewBox="0 0 512 512"><path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"/></svg>
                         </a>
                         <ul x-show="pages" x-cloak @click.outside="pages = false"
-                            class="absolute left-0 top-full mt-0 min-w-[240px] bg-white shadow-[0_5px_20px_#0000001a] rounded-md py-[30px] px-[30px] space-y-[15px] z-50">
-                            <li><a href="{{ route('about-us') }}" class="text-sm font-medium text-[#888] hover:text-[#3E80FF] transition-all duration-300 block">About Us</a></li>
-                            <li><a href="{{ route('privacy-policy') }}" class="text-sm font-medium text-[#888] hover:text-[#3E80FF] transition-all duration-300 block">Privacy Policy</a></li>
-                            <li><a href="{{ route('login') }}" class="text-sm font-medium text-[#888] hover:text-[#3E80FF] transition-all duration-300 block">Sign In</a></li>
-                            <li><a href="{{ route('register') }}" class="text-sm font-medium text-[#888] hover:text-[#3E80FF] transition-all duration-300 block">Sign Up</a></li>
-                            <li><a href="{{ route('contact') }}" class="text-sm font-medium text-[#888] hover:text-[#3E80FF] transition-all duration-300 block">Contact</a></li>
+                            class="absolute left-0 top-full mt-0 min-w-[240px] bg-white dark:bg-[#1E293B] shadow-[0_5px_20px_#0000001a] rounded-md py-[25px] px-[25px] space-y-[12px] z-50">
+                            <li><a href="{{ route('about-us') }}" class="text-sm font-medium text-[#888] dark:text-[#94A3B8] hover:text-[#3E80FF] transition-all duration-300 block">About Us</a></li>
+                            <li><a href="{{ route('privacy-policy') }}" class="text-sm font-medium text-[#3E80FF] transition-all duration-300 block">Privacy Policy</a></li>
+                            <li><a href="{{ route('contact') }}" class="text-sm font-medium text-[#888] dark:text-[#94A3B8] hover:text-[#3E80FF] transition-all duration-300 block">Contact</a></li>
+                            <li><a href="{{ route('login') }}" class="text-sm font-medium text-[#888] dark:text-[#94A3B8] hover:text-[#3E80FF] transition-all duration-300 block">Sign In</a></li>
+                            <li><a href="{{ route('register') }}" class="text-sm font-medium text-[#888] dark:text-[#94A3B8] hover:text-[#3E80FF] transition-all duration-300 block">Sign Up</a></li>
                         </ul>
                     </li>
                 </ul>
                 <button onclick="document.documentElement.classList.toggle('dark');localStorage.setItem('dark',document.documentElement.classList.contains('dark'))"
                         class="p-2 rounded-full transition-all duration-300 mr-1"
-                        :class="sticky ? 'text-[#24126A] hover:text-[#3E80FF]' : 'text-white/90 hover:text-white'">
+                        :class="sticky ? 'text-[#24126A] dark:text-white hover:text-[#3E80FF]' : 'text-white/90 hover:text-white'">
                     <svg class="w-5 h-5 block dark:hidden" fill="currentColor" viewBox="0 0 24 24"><path d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z"/></svg>
                     <svg class="w-5 h-5 hidden dark:block" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.25a.75.75 0 01.75.75v2.25a.75.75 0 01-1.5 0V3a.75.75 0 01.75-.75zM7.5 12a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM18.894 6.166a.75.75 0 00-1.06-1.06l-1.591 1.59a.75.75 0 101.06 1.061l1.591-1.59zM21.75 12a.75.75 0 01-.75.75h-2.25a.75.75 0 010-1.5H21a.75.75 0 01.75.75zM17.834 18.894a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 10-1.061 1.06l1.59 1.591zM12 18a.75.75 0 01.75.75V21a.75.75 0 01-1.5 0v-2.25A.75.75 0 0112 18zM7.758 17.303a.75.75 0 00-1.061-1.06l-1.591 1.59a.75.75 0 001.06 1.061l1.591-1.59zM6 12a.75.75 0 01-.75.75H3a.75.75 0 010-1.5h2.25A.75.75 0 016 12zM6.697 7.757a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 00-1.061 1.06l1.59 1.591z"/></svg>
                 </button>
@@ -87,23 +87,23 @@
                 </div>
             </div>
         </div>
-        <div x-show="mOpen" x-cloak @click.outside="mOpen = false" class="lg:hidden bg-white shadow-[0_15px_20px_rgba(0,0,0,0.1)] rounded-lg p-5 max-h-[350px] overflow-y-auto border-t border-gray-100">
+        <div x-show="mOpen" x-cloak @click.outside="mOpen = false" class="lg:hidden bg-white dark:bg-[#1E293B] shadow-[0_15px_20px_rgba(0,0,0,0.1)] rounded-lg p-5 max-h-[350px] overflow-y-auto border-t border-gray-100 dark:border-gray-800">
             <ul class="space-y-1">
-                <li><a href="/" @click="mOpen = false" class="block py-3 px-4 text-sm font-medium text-[#051441] hover:text-[#3E80FF]">Home</a></li>
+                <li><a href="/" @click="mOpen = false" class="block py-3 px-4 text-sm font-medium text-[#051441] dark:text-white hover:text-[#3E80FF]">Home</a></li>
                 <li x-data="{ mp: false }">
-                    <button @click="mp = !mp" class="flex items-center justify-between w-full py-3 px-4 text-sm font-medium text-[#051441] hover:text-[#3E80FF]">
+                    <button @click="mp = !mp" class="flex items-center justify-between w-full py-3 px-4 text-sm font-medium text-[#051441] dark:text-white hover:text-[#3E80FF]">
                         Pages <svg class="w-3 h-3 fill-current transition-transform" :class="{ 'rotate-180': mp }" viewBox="0 0 512 512"><path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"/></svg>
                     </button>
                     <div x-show="mp" x-cloak class="ml-4 space-y-1">
-                        <a href="{{ route('about-us') }}" @click="mOpen = false" class="block py-2 px-4 text-sm text-[#888] hover:text-[#3E80FF]">About Us</a>
-                        <a href="{{ route('privacy-policy') }}" @click="mOpen = false" class="block py-2 px-4 text-sm text-[#888] hover:text-[#3E80FF]">Privacy Policy</a>
-                        <a href="{{ route('login') }}" @click="mOpen = false" class="block py-2 px-4 text-sm text-[#888] hover:text-[#3E80FF]">Sign In</a>
-                        <a href="{{ route('register') }}" @click="mOpen = false" class="block py-2 px-4 text-sm text-[#888] hover:text-[#3E80FF]">Sign Up</a>
-                        <a href="{{ route('contact') }}" @click="mOpen = false" class="block py-2 px-4 text-sm text-[#888] hover:text-[#3E80FF]">Contact</a>
+                        <a href="{{ route('about-us') }}" @click="mOpen = false" class="block py-2 px-4 text-sm text-[#888] dark:text-[#94A3B8] hover:text-[#3E80FF]">About Us</a>
+                        <a href="{{ route('privacy-policy') }}" @click="mOpen = false" class="block py-2 px-4 text-sm text-[#3E80FF]">Privacy Policy</a>
+                        <a href="{{ route('contact') }}" @click="mOpen = false" class="block py-2 px-4 text-sm text-[#888] dark:text-[#94A3B8] hover:text-[#3E80FF]">Contact</a>
+                        <a href="{{ route('login') }}" @click="mOpen = false" class="block py-2 px-4 text-sm text-[#888] dark:text-[#94A3B8] hover:text-[#3E80FF]">Sign In</a>
+                        <a href="{{ route('register') }}" @click="mOpen = false" class="block py-2 px-4 text-sm text-[#888] dark:text-[#94A3B8] hover:text-[#3E80FF]">Sign Up</a>
                     </div>
                 </li>
             </ul>
-            <div class="mt-3 pt-3 border-t border-gray-100">
+            <div class="mt-3 pt-3 border-t border-gray-100 dark:border-gray-800">
                 <a href="{{ route('register') }}" @click="mOpen = false" class="block text-center text-sm font-medium px-[30px] py-[14px] bg-[#3E80FF] text-white rounded-[30px] hover:bg-[#24126A] transition-all">Get started</a>
             </div>
         </div>
@@ -111,52 +111,83 @@
 </header>
 
 <main>
+    {{-- ===== BREADCRUMBS ===== --}}
     <section class="bg-[#24126A] pt-[108px] pb-[55px] lg:pt-[140px] lg:pb-[85px] relative bg-cover bg-right text-center" style="background-image: url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ccircle cx=%2290%22 cy=%2210%22 r=%2240%22 fill=%22white%22 opacity=%220.03%22/%3E%3Ccircle cx=%2210%22 cy=%2290%22 r=%2230%22 fill=%22white%22 opacity=%220.02%22/%3E%3C/svg%3E');">
         <div class="container mx-auto px-4 text-center relative z-[2]">
-            <h2 class="font-['Spartan'] text-2xl font-bold text-white capitalize leading-7 wow fadeInUp" data-wow-delay=".3s">Contact Us</h2>
+            <h2 class="font-['Spartan'] text-2xl lg:text-3xl font-bold text-white capitalize leading-tight wow fadeInUp" data-wow-delay=".3s">Privacy Policy</h2>
             <ul class="inline-flex items-center gap-2 mt-2.5 wow fadeInUp" data-wow-delay=".5s">
                 <li class="text-white/70 text-sm font-medium after:content-['>'] after:ml-2 after:text-white/50"><a href="/" class="text-white hover:text-white/80">Home</a></li>
-                <li class="text-white text-sm font-medium">Contact Us</li>
+                <li class="text-white text-sm font-medium">Privacy Policy</li>
             </ul>
         </div>
     </section>
 
-    <section class="py-[50px] lg:py-[80px] bg-white">
+    {{-- ===== CONTENT SECTION ===== --}}
+    <section class="py-[50px] lg:py-[80px]">
         <div class="container mx-auto px-4">
-            <div class="max-w-[800px] mx-auto">
-                <div class="text-center mb-12">
-                    <h3 class="text-sm font-semibold text-[#3E80FF] uppercase mb-5 wow zoomIn">Get In Touch</h3>
-                    <h2 class="font-['Spartan'] text-4xl leading-tight wow fadeInUp">Contact Us</h2>
-                    <p class="text-base leading-7 wow fadeInUp">Have questions? We'd love to hear from you.</p>
+            <div class="max-w-[850px] mx-auto bg-white dark:bg-[#1E293B] rounded-2xl shadow-[0_10px_35px_rgba(0,0,0,0.05)] p-6 sm:p-10 lg:p-12 text-[#4B5563] dark:text-[#CBD5E1] space-y-8 leading-relaxed">
+                <div>
+                    <span class="text-xs uppercase tracking-wider font-semibold text-[#3E80FF]">Legal Notice</span>
+                    <h1 class="font-['Spartan'] text-2xl sm:text-3xl font-bold text-[#1F2937] dark:text-white mt-1">Privacy Policy for S6WeightCalculator</h1>
+                    <p class="text-xs text-gray-500 dark:text-gray-400 mt-2">Last updated: October 1, 2026</p>
                 </div>
-                @if(session('success'))
-                    <div class="bg-green-50 text-green-700 text-sm rounded-[30px] p-4 mb-4">{{ session('success') }}</div>
-                @endif
-                @if(session('error'))
-                    <div class="bg-red-50 text-red-700 text-sm rounded-[30px] p-4 mb-4">{{ session('error') }}</div>
-                @endif
-                <form action="{{ route('contact.send') }}" method="POST" class="wow fadeInUp">
-                    @csrf
-                    <div class="flex flex-wrap -mx-4">
-                        <div class="w-full md:w-1/2 px-4 mb-5">
-                            <input type="text" name="name" placeholder="Your Name" required class="w-full h-[52px] bg-[#F4F7FA] border border-[#eee] rounded-[30px] px-5 text-sm text-[#727272] placeholder:text-[#727272]/50 outline-none focus:border-[#3E80FF] transition-all">
-                        </div>
-                        <div class="w-full md:w-1/2 px-4 mb-5">
-                            <input type="email" name="email" placeholder="Your Email" required class="w-full h-[52px] bg-[#F4F7FA] border border-[#eee] rounded-[30px] px-5 text-sm text-[#727272] placeholder:text-[#727272]/50 outline-none focus:border-[#3E80FF] transition-all">
-                        </div>
-                        <div class="w-full px-4 mb-5">
-                            <textarea name="message" placeholder="Your Message" rows="5" required class="w-full bg-[#F4F7FA] border border-[#eee] rounded-[20px] px-5 py-4 text-sm text-[#727272] placeholder:text-[#727272]/50 outline-none focus:border-[#3E80FF] transition-all resize-none"></textarea>
-                        </div>
-                        <div class="w-full px-4 text-center">
-                            <button type="submit" class="inline-block text-sm font-medium capitalize px-[30px] py-[14px] bg-[#3E80FF] text-white rounded-[30px] transition-all duration-300 hover:bg-[#24126A]">Send Message</button>
-                        </div>
-                    </div>
-                </form>
+
+                <div class="space-y-4">
+                    <p>At <strong>S6WeightCalculator</strong> (accessible from <a href="https://s6universityweightcalculator.top" class="text-[#3E80FF] hover:underline">https://s6universityweightcalculator.top</a>), the privacy of our visitors and students is of supreme importance to us. This Privacy Policy document outlines the types of information that is collected and recorded by S6WeightCalculator and how we use it.</p>
+                    <p>If you have additional questions or require more information about our Privacy Policy, do not hesitate to contact us at <a href="mailto:abonga029@gmail.com" class="text-[#3E80FF] hover:underline">abonga029@gmail.com</a>.</p>
+                </div>
+
+                <div class="space-y-3">
+                    <h2 class="font-['Spartan'] text-xl font-bold text-[#1F2937] dark:text-white">1. Log Files</h2>
+                    <p>S6WeightCalculator follows a standard procedure of using log files. These files log visitors when they visit websites. The information collected by log files includes internet protocol (IP) addresses, browser type, Internet Service Provider (ISP), date and time stamp, referring/exit pages, and possibly the number of clicks. These are not linked to any information that is personally identifiable. The purpose of the information is for analyzing trends, administering the site, tracking users' movement on the website, and gathering demographic information.</p>
+                </div>
+
+                <div class="space-y-3">
+                    <h2 class="font-['Spartan'] text-xl font-bold text-[#1F2937] dark:text-white">2. Cookies and Web Beacons</h2>
+                    <p>Like any other website, S6WeightCalculator uses 'cookies'. These cookies are used to store information including visitors' preferences, and the pages on the website that the visitor accessed or visited. The information is used to optimize the users' experience by customizing our web page content based on visitors' browser type and/or other information.</p>
+                </div>
+
+                <div class="space-y-3 p-5 rounded-xl bg-blue-50/50 dark:bg-blue-900/10 border border-blue-100 dark:border-blue-900/30">
+                    <h2 class="font-['Spartan'] text-xl font-bold text-[#1F2937] dark:text-white flex items-center gap-2">
+                        <span>3. Google DoubleClick DART Cookie & Google AdSense</span>
+                    </h2>
+                    <p>Google is one of the third-party vendors on our site. It also uses cookies, known as DART cookies, to serve ads to our site visitors based upon their visit to <a href="https://s6universityweightcalculator.top" class="text-[#3E80FF] hover:underline">s6universityweightcalculator.top</a> and other sites on the internet.</p>
+                    <p>However, visitors may choose to decline the use of DART cookies by visiting the Google ad and content network Privacy Policy at the following URL: <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener noreferrer" class="text-[#3E80FF] hover:underline">https://policies.google.com/technologies/ads</a></p>
+                    <p>Users may also opt out of personalized advertising by visiting <a href="https://www.aboutads.info/choices/" target="_blank" rel="noopener noreferrer" class="text-[#3E80FF] hover:underline">www.aboutads.info</a>.</p>
+                </div>
+
+                <div class="space-y-3">
+                    <h2 class="font-['Spartan'] text-xl font-bold text-[#1F2937] dark:text-white">4. Advertising Partners Privacy Policies</h2>
+                    <p>You may consult this list to find the Privacy Policy for each of the advertising partners of S6WeightCalculator.</p>
+                    <p>Third-party ad servers or ad networks use technologies like cookies, JavaScript, or Web Beacons that are used in their respective advertisements and links that appear on S6WeightCalculator, which are sent directly to users' browsers. They automatically receive your IP address when this occurs. These technologies are used to measure the effectiveness of their advertising campaigns and/or to personalize the advertising content that you see on websites that you visit.</p>
+                    <p>Note that S6WeightCalculator has no access to or control over these cookies that are used by third-party advertisers.</p>
+                </div>
+
+                <div class="space-y-3">
+                    <h2 class="font-['Spartan'] text-xl font-bold text-[#1F2937] dark:text-white">5. Student and Academic Data</h2>
+                    <p>When you use the S6 weight calculator tool, your subject choices, grades, and scores may be processed securely to compute your university admission weights. We do not sell, rent, or trade your personal academic records to third parties.</p>
+                </div>
+
+                <div class="space-y-3">
+                    <h2 class="font-['Spartan'] text-xl font-bold text-[#1F2937] dark:text-white">6. Children's Information</h2>
+                    <p>Another part of our priority is adding protection for children while using the internet. We encourage parents and guardians to observe, participate in, and/or monitor and guide their online activity.</p>
+                    <p>S6WeightCalculator does not knowingly collect any Personal Identifiable Information from children under the age of 13. If you think that your child provided this kind of information on our website, we strongly encourage you to contact us immediately and we will do our best efforts to promptly remove such information from our records.</p>
+                </div>
+
+                <div class="space-y-3">
+                    <h2 class="font-['Spartan'] text-xl font-bold text-[#1F2937] dark:text-white">7. Consent</h2>
+                    <p>By using our website, you hereby consent to our Privacy Policy and agree to its terms.</p>
+                </div>
+
+                <div class="pt-4 border-t border-gray-100 dark:border-gray-800">
+                    <p class="text-sm">For any inquiries regarding this policy or our data practices, contact us at: <a href="mailto:abonga029@gmail.com" class="text-[#3E80FF] font-semibold hover:underline">abonga029@gmail.com</a></p>
+                </div>
             </div>
         </div>
     </section>
 </main>
 
+{{-- ===== FOOTER ===== --}}
 <footer class="bg-[#24126A] pt-[36px] pb-0 lg:pt-[85px]">
     <div class="container mx-auto px-4">
         <div class="flex flex-wrap -mx-4">
